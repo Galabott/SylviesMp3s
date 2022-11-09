@@ -25,7 +25,6 @@ CREATE TABLE Musics (
 	user_id INT UNSIGNED NOT NULL,
 	created_at DATETIME NOT NULL DEFAULT Now(),
 	edited_at DATETIME DEFAULT NULL,
-	deleted_at DATETIME DEFAULT NULL,
 	
 	FOREIGN KEY(user_id) REFERENCES Users(id)
 );

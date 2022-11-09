@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SylvieSQL", "SylvieSQL\SylvieSQL.csproj", "{96ACC1AD-8EBF-45E1-88C2-81907E03766A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96ACC1AD-8EBF-45E1-88C2-81907E03766A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96ACC1AD-8EBF-45E1-88C2-81907E03766A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96ACC1AD-8EBF-45E1-88C2-81907E03766A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96ACC1AD-8EBF-45E1-88C2-81907E03766A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

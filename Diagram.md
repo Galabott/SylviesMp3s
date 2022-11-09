@@ -7,7 +7,7 @@ class User{
     +password :string
     +User(int,string,string)
 }
-User -|> UserService
+User *--> UserService
 class UserService{
     +CurrentUser: User
     +GetInstance()
@@ -24,7 +24,7 @@ class Music{
     +created_at: DateTime
     +updated_at: DateTime
 }
-Music -|> MusicService
+Music *--> MusicService
 
 class MusicService{
     +GetInstance()
@@ -43,6 +43,13 @@ class ControllerApp{
     +Musics: List<Music>
 }
 
+Mp3Archive -|> ControllerApp
+class Mp3Archive{
+    +ReadMp3(string)
+    +AddNewMp3(string)
+    +AnalyseMp3(string)
+    +DeleteMp3(string)
+}
 
 
 

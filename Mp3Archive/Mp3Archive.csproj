@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NAudio" Version="2.1.0" />
+      <PackageReference Include="SoundPlayerControl" Version="0.9.0.6" />
+      <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="bin\Debug\net6.0\ref" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="bin\Debug\net6.0\ref\Archive\Dragula.mp3" />
+    </ItemGroup>
+
+</Project>

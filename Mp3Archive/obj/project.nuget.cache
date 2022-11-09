@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "5SgN0HH17ssO163/D7CyX1z32EfxaVcy26jxXZFcNmMsShNM+yYyoLo2a5dhenSoZVi/oX/LHn8+1pPujPdRoA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mathieu\\Documents\\session5\\dev_suejt_special\\SylviesMp3s\\Mp3Archive\\Mp3Archive.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mathieu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio\\2.1.0\\naudio.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio.asio\\2.1.0\\naudio.asio.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio.core\\2.1.0\\naudio.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio.midi\\2.1.0\\naudio.midi.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio.wasapi\\2.1.0\\naudio.wasapi.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\naudio.winmm\\2.1.0\\naudio.winmm.2.1.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\soundplayercontrol\\0.9.0.6\\soundplayercontrol.0.9.0.6.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mathieu\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SoundPlayerControl 0.9.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SoundPlayerControl",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

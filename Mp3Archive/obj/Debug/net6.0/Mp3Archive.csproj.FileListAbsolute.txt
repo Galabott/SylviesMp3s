@@ -1,0 +1,12 @@
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\bin\Debug\net6.0\Mp3Archive.deps.json
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\bin\Debug\net6.0\Mp3Archive.dll
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\bin\Debug\net6.0\Mp3Archive.pdb
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.csproj.AssemblyReference.cache
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.AssemblyInfoInputs.cache
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.AssemblyInfo.cs
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.csproj.CoreCompileInputs.cache
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.dll
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\refint\Mp3Archive.dll
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\Mp3Archive.pdb
+C:\Users\Mathieu\Documents\session5\dev_suejt_special\SylviesMp3s\Mp3Archive\obj\Debug\net6.0\ref\Mp3Archive.dll

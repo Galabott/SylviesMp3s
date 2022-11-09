@@ -1,6 +1,6 @@
-﻿namespace SylvieSQL;
+﻿namespace SylvieSQL.Users;
 
-public class User : IComparable<User>
+public abstract class User : IComparable<User>
 {
     // Variables //
     private readonly int _id;
@@ -8,7 +8,7 @@ public class User : IComparable<User>
     private readonly string _password;
 
     // Constructors //
-    public User(int id, string email, string password)
+    protected User(int id, string email, string password)
     {
         _id = id;
         _email = email;
@@ -20,7 +20,7 @@ public class User : IComparable<User>
     public string GetEmail() { return _email; }
     public string GetPassword() { return _password; }
 
-    // Compare to function //
+    // CompareTo function //
     public int CompareTo(User? other)
     {
         if (ReferenceEquals(this, other)) return 0;

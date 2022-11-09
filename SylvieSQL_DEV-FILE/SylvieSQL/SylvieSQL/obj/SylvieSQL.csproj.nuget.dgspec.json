@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {}
+    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {
+    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
+        "projectUniqueName": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
         "projectName": "SylvieSQL",
-        "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
+        "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\obj\\",
+        "outputPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV-FILE\\SylvieSQL\\SylvieSQL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,0 +1,14 @@
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\bin\Debug\net6.0\SylvieSQL.deps.json
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\bin\Debug\net6.0\SylvieSQL.runtimeconfig.json
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\bin\Debug\net6.0\SylvieSQL.dll
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\bin\Debug\net6.0\SylvieSQL.pdb
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.csproj.AssemblyReference.cache
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.AssemblyInfoInputs.cache
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.AssemblyInfo.cs
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.csproj.CoreCompileInputs.cache
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.dll
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\refint\SylvieSQL.dll
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.pdb
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\SylvieSQL.genruntimeconfig.cache
+C:\Users\simon\Desktop\Cegep\Session5\Analyse objet\SylviesMp3s\SylvieSQL_DEV\SylvieSQL\SylvieSQL\obj\Debug\net6.0\ref\SylvieSQL.dll

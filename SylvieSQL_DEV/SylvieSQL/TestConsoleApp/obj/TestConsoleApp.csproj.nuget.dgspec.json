@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\TestConsoleApp\\TestConsoleApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
+        "projectName": "SylvieSQL",
+        "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\TestConsoleApp\\TestConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\TestConsoleApp\\TestConsoleApp.csproj",
+        "projectName": "TestConsoleApp",
+        "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\TestConsoleApp\\TestConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\TestConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj": {
+                "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylvieSQL_DEV\\SylvieSQL\\SylvieSQL\\SylvieSQL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

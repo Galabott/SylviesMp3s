@@ -3,7 +3,7 @@
 
 class User{
     +id: int
-    +email : string
+    +username : string
     +password :string
     +User(int,string,string)
 }

@@ -11,9 +11,9 @@ public static class UserService
     // Functions //
     public static bool AddUser(User u)
     {
-        if (u.GetEmail().Trim() != "" || u.GetPassword().Length >= 8)
+        if (u.GetUsername().Trim() != "" || u.GetUsername().Length > 20 || u.GetPassword().Length >= 8)
         {
-            var sql = $"INSERT INTO Users (email, password) VALUES('{u.GetEmail()}', '{u.GetPassword()}')";
+            var sql = $"INSERT INTO Users (username, password) VALUES('{u.GetUsername()}', '{u.GetPassword()}')";
 
             if (SylvieRequest.ExecuteCommand(sql)! != null)
                 return true;
@@ -24,10 +24,14 @@ public static class UserService
 
     public static bool Login(User u)
     {
-        var sql = $"SELECT * FROM Users WHERE email = '{u.GetEmail()}' AND password = '{u.GetPassword()}'";
-        
-        var reader = SylvieRequest.ExecuteCommand(sql);
+        var sql = $"SELECT * FROM Users WHERE username = '{u.GetUsername()}' AND password = '{u.GetPassword()}'";
 
-        return SylvieRequest.ExecuteCommand(sql)!.Read();
+        if (SylvieRequest.ExecuteCommand(sql)!.Read())
+        {
+            CurrentUser = u;
+            return true;
+        }
+
+        return false;
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Data.SqlClient;
-using System.Data.SQLite;
+﻿using System.Data.SQLite;
 
 namespace SylvieSQL;
 
@@ -30,7 +29,7 @@ public static class SylvieRequest
         }
         catch(SQLiteException)
         {
-            return reader;
+            // pass
         }
 
         return reader;

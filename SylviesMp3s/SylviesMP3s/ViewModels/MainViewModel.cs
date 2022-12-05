@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace $safeprojectname$.ViewModels
+namespace SylviesMp3s.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace $safeprojectname$.ViewModels
+namespace SylviesMp3s.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

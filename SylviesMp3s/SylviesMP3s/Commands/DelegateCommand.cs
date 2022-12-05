@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace $safeprojectname$.Commands
+namespace SylviesMp3s.Commands
 {
     public class DelegateCommand<T> : ICommand
     {

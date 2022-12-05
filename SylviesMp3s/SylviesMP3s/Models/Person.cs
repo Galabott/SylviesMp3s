@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace $safeprojectname$.Models
+namespace SylviesMp3s.Models
 {
     public class Person
     {

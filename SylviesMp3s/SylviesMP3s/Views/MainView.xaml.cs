@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using $safeprojectname$.ViewModels;
+using SylviesMp3s.ViewModels;
 
-namespace $safeprojectname$
+namespace SylviesMp3s
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

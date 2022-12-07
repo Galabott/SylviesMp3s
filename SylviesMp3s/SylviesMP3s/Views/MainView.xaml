@@ -4,24 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SylviesMp3s"
+        xmlns:vm="clr-namespace:SylviesMp3s.ViewModels"
+        xmlns:views="clr-namespace:SylviesMp3s.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="StatusBar">
             <Setter Property="Height" Value="auto" />
         </Style>
+        <DataTemplate DataType="{x:Type vm:ListPlayListViewModel}">
+            <views:ListPlayListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PlayListViewModel}">
+            <views:PlayListView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PlayerViewModel}">
+            <views:PlayerView DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
-    <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_Fichier"/>
-        </Menu>
-        <StatusBar DockPanel.Dock="Bottom">
-            <StatusBarItem>
-                <TextBlock Text="Status bar"/>
-            </StatusBarItem>
-        </StatusBar>
+    <Grid>
         <Grid>
-            <TextBlock Text="Contenu du grid" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Button>Button 3</Button>
+                <Button Grid.Column="1" Grid.Row="1">Button 2</Button>
+            </Grid>
+            <Button>Button 1</Button>
         </Grid>
-    </DockPanel>
+    </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿````plantuml
+
 @startuml
 
 class User{
@@ -37,13 +38,13 @@ class ControllerLogin{
     +login()
 }
 
-UserService -|> ControllerApp
-MusicService -|> ControllerApp
+UserService <|- ControllerApp
+MusicService <|- ControllerApp
 class ControllerApp{
     +Musics: List<Music>
 }
 
-Mp3Archive -|> ControllerApp
+Mp3Archive <|- ControllerApp
 class Mp3Archive{
     +ReadMp3(string)
     +AddNewMp3(string)
@@ -55,4 +56,6 @@ class Mp3Archive{
 
 
 @enduml
+
+
 ````

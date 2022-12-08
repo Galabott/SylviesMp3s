@@ -6,39 +6,9 @@
              xmlns:local="clr-namespace:SylviesMp3s.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <Grid>
-        <Button>Button 1</Button>
-    </Grid>
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <WrapPanel Orientation="Vertical">
         <ListBox  Name="PLAYLISTS" DisplayMemberPath="Title" Height="339" Width="174"/>
         <Button Content="Add a playlist" Command="{Binding AddPlaylistCommand}" />
         <Button Content="Remove selected playlist" Command="{Binding DelPlaylistCommand}" />
     </WrapPanel>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 </UserControl>

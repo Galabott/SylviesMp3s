@@ -39,7 +39,7 @@ namespace SylviesMp3s.ViewModels
             set
             {
                 _selectedPlaylist = value;
-                OnPropertyChanged("SelectedProd");
+                OnPropertyChanged("SelectedPlaylist");
             }
 
         }
@@ -47,13 +47,13 @@ namespace SylviesMp3s.ViewModels
         public ListPlayListViewModel()
         {
 
-            AddPlaylistCommand = new RelayCommand(AddProd);
-            DelPlaylistCommand = new RelayCommand(DelProd);
+            AddPlaylistCommand = new RelayCommand(AddPlaylist);
+            DelPlaylistCommand = new RelayCommand(DelPlaylist);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
 
-        private void DelProd(object nothig)
+        private void DelPlaylist(object nothig)
         {
             if (SelectedPlaylist != null)
             {
@@ -61,7 +61,7 @@ namespace SylviesMp3s.ViewModels
             }
         }
 
-        private void AddProd(object nothig)
+        private void AddPlaylist(object nothig)
         {
             string? _artist = null;
             string? _genre = null;
@@ -72,20 +72,19 @@ namespace SylviesMp3s.ViewModels
 
             while (!goodName)
             {
-                foreach (Playlists p in pplaylists)
+                Playlists compareTo;
+                try
                 {
-                    if (_title + i == p.Title)
-                    {
-                        i++;
-                    }
-                    else
-                    {
-                        goodName = true;
-                        _title += i;
-                    }
-
+                    compareTo = PPlaylists.Where(x => x.Title == _title + i).First();
+                    i++;
+                }
+                catch
+                {
+                    goodName = true;
+                    _title += i;
                 }
             }
+
 
             int? _year = 2022;
             bool _is_public = true;
@@ -98,6 +97,11 @@ namespace SylviesMp3s.ViewModels
             Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
             pplaylists.Add(A);
             SelectedPlaylist = A;
+
+            foreach(Playlists n in pplaylists)
+            {
+                Console.WriteLine(n.Title + "\n");
+            }
         }
     }
 }

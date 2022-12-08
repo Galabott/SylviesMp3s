@@ -12,7 +12,7 @@
         <Style TargetType="StatusBar">
             <Setter Property="Height" Value="auto" />
         </Style>
-        <DataTemplate DataType="{x:Type vm:ListPlayListViewModel}">
+        <DataTemplate x:Name="test" DataType="{x:Type vm:ListPlayListViewModel}">
             <views:ListPlayListView DataContext="{Binding}"/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type vm:PlayListViewModel}">
@@ -33,10 +33,10 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
-                <Button>Button 3</Button>
-                <Button Grid.Column="1" Grid.Row="1">Button 2</Button>
+                <ContentControl Content="{Binding UpperViewModel}"/>
+                <ContentControl Content="{Binding CentralViewModel}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <Button>Button 1</Button>
+            <ContentControl Content="{Binding LeftViewModel}"/>
         </Grid>
     </Grid>
 </Window>

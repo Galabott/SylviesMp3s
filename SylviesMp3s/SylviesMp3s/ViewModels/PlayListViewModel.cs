@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SylviesMp3s.ViewModels
 {
-    class PlayListViewModel
+    class PlayListViewModel : BaseViewModel
     {
     }
 }

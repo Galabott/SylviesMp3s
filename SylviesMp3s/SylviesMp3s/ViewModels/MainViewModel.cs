@@ -6,29 +6,55 @@ namespace SylviesMp3s.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel currentViewModel;
+        private BaseViewModel leftViewModel;
 
-        public BaseViewModel CurrentViewModel
+        public BaseViewModel LeftViewModel
         {
-            get { return currentViewModel; }
+            get { return leftViewModel; }
             set
             {
-                currentViewModel = value;
+                leftViewModel = value;
                 OnPropertyChanged();
             }
         }
 
+        private BaseViewModel centralViewModel;
 
+        public BaseViewModel CentralViewModel
+        {
+            get { return centralViewModel; }
+            set
+            {
+                centralViewModel = value;
+                OnPropertyChanged();
+            }
+        }
+        private BaseViewModel upperViewModel;
 
-        MainContentViewModel mainContentViewModel;
+        public BaseViewModel UpperViewModel
+        {
+            get { return upperViewModel; }
+            set
+            {
+                upperViewModel = value;
+                OnPropertyChanged();
+            }
+        }
 
+        ListPlayListViewModel listPlayListViewModel;
+        PlayListViewModel playListViewModel;
+        PlayerViewModel playerViewModel;
 
 
         public MainViewModel()
         {
-            mainContentViewModel = new MainContentViewModel();
+            listPlayListViewModel = new ListPlayListViewModel();
+            playListViewModel = new PlayListViewModel();
+            playerViewModel = new PlayerViewModel();
 
-            currentViewModel = mainContentViewModel;
+            LeftViewModel = listPlayListViewModel;
+            CentralViewModel = playListViewModel;
+            upperViewModel = playListViewModel;
 
         }
     }

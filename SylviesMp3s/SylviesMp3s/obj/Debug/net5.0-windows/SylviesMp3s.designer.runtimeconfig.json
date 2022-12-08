@@ -6,7 +6,7 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Mathieu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\G_Bot\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Mathieu\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],

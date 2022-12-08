@@ -102,9 +102,5 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("LastConnection");
             }
         }
-
-        //int id = -1;
-        //bool is_admin = false;
-        //DateTime last_connection = DateTime.Now;
     }
 }

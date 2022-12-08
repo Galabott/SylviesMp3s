@@ -24,6 +24,7 @@ namespace SylviesMp3s.Views
         public ListPlayListView()
         {
             InitializeComponent();
+            DataContext = new ListPlayListViewModel();
         }
     }
 }

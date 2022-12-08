@@ -54,7 +54,7 @@ namespace SylviesMp3s.ViewModels
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;
-            upperViewModel = playListViewModel;
+            upperViewModel = playerViewModel;
 
         }
     }

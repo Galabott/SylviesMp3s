@@ -1,29 +1,47 @@
-DROP TABLE IF EXISTS Musics, Users;
+DROP TABLE IF EXISTS Playlists_tunes, Tunes, Playlists, Users;
 
-CREATE TABLE Users (
-	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	username VARCHAR(20) NOT NULL,
-	password VARCHAR(32) NOT NULL
-);
-INSERT INTO Users VALUES 
-(
-	DEFAULT,
-	'admin@admin.co',
-	SHA2('toor', 256)
-),
-(
-	DEFAULT,
-	'sylvieSQL@gmail.com',
-	SHA2('IL0veMusic', 256)
+CREATE TABLE IF NOT EXISTS Users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(45) NOT NULL,
+    password VARCHAR(64) NOT NULL,
+    email VARCHAR(60) DEFAULT NULL,
+    is_admin TINYINT DEFAULT 0,
+    last_connection DATETIME DEFAULT NOW()
 );
 
-CREATE TABLE Musics (
-	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	title VARCHAR(50),
-	author VARCHAR(50),
-	user_id INT UNSIGNED NOT NULL,
-	created_at DATETIME NOT NULL DEFAULT Now(),
-	edited_at DATETIME DEFAULT NULL,
-	
-	FOREIGN KEY(user_id) REFERENCES Users(id)
+CREATE TABLE IF NOT EXISTS Playlists (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    artist VARCHAR(100) DEFAULT NULL,
+    genre VARCHAR(45) DEFAULT NULL,
+    title VARCHAR(100) NOT NULL,
+    year INT DEFAULT NULL,
+    is_public TINYINT DEFAULT 0,
+    id_user INT NOT NULL,
+    album_cover LONGTEXT DEFAULT NULL,
+    
+    FOREIGN KEY (id_user) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Tunes (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    artist VARCHAR(100) NOT NULL,
+    length INT DEFAULT NULL,
+    genre VARCHAR(45) DEFAULT NULL,
+    year INT DEFAULT NULL,
+    filepath VARCHAR(255) DEFAULT NULL,
+    id_album INT DEFAULT NULL,
+    id_user INT NOT NULL,
+    
+    FOREIGN KEY (id_album) REFERENCES Playlists(id),
+    FOREIGN KEY (id_user) REFERENCES Users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Playlists_tunes (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_playlist INT NOT NULL,
+    id_tune INT NOT NULL,
+    
+    FOREIGN KEY (id_playlist) REFERENCES Playlists(id),
+    FOREIGN KEY (id_tune) REFERENCES Tunes(id)
 );

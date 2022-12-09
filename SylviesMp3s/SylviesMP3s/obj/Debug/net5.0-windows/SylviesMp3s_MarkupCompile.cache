@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
-42047132714
+52092606603
 
-201071077397
+22942015597
 208-487679679
-Views\ListPlayListView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;
+Views\ListPlayListView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;
 
 False
 

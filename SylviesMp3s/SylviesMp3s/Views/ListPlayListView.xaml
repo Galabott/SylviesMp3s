@@ -7,8 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <WrapPanel Orientation="Vertical">
-        <ListBox  Name="PLAYLISTS" DisplayMemberPath="Title" Height="339" Width="174" ItemsSource="{Binding PPlaylists, Mode=TwoWay}" SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"/>
+        <ListBox  Name="PLAYLISTS" DisplayMemberPath="Title" Height="339" Width="158" ItemsSource="{Binding PPlaylists, Mode=TwoWay}" SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"/>
         <Button Content="Add a playlist" Command="{Binding AddPlaylistCommand}" />
         <Button Content="Remove selected playlist" Command="{Binding DelPlaylistCommand}" />
+        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="21,51,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
     </WrapPanel>
 </UserControl>

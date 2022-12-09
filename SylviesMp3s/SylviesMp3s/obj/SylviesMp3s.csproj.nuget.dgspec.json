@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj": {}
+    "C:\\Users\\laure\\OneDrive\\Desktop\\test_git\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj": {
+    "C:\\Users\\laure\\OneDrive\\Desktop\\test_git\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
+        "projectUniqueName": "C:\\Users\\laure\\OneDrive\\Desktop\\test_git\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
         "projectName": "SylviesMp3s",
-        "projectPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-        "packagesPath": "C:\\Users\\Mathieu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
+        "projectPath": "C:\\Users\\laure\\OneDrive\\Desktop\\test_git\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
+        "packagesPath": "C:\\Users\\laure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\laure\\OneDrive\\Desktop\\test_git\\SylviesMp3s\\SylviesMp3s\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mathieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laure\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -55,11 +57,16 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -68,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,22 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="640">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
         <Image x:Name="albumCoverImage" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" VerticalAlignment="Center" Width="100" Source="/Assets/albumCover.png"/>
-        <Label x:Name="songNameLabel" Content="Axolotl in a bubble" Margin="283,25,224,0" VerticalAlignment="Top" Background="White" FontFamily="Arial Black"/>
-        <Label x:Name="songAuthorLabel" Content="Sidramon" HorizontalAlignment="Left" Margin="320,54,0,0" VerticalAlignment="Top" Background="White" FontFamily="Arial Narrow" FontStyle="Italic"/>
-        <Button x:Name="previousSongButton" HorizontalAlignment="Left" Margin="283,115,0,0" VerticalAlignment="Top" Width="25" Height="25">
+        <Label x:Name="songNameLabel" Content="The Axolotl" Margin="304,35,0,0" VerticalAlignment="Top" FontFamily="Arial Black" HorizontalContentAlignment="Center" Height="24" HorizontalAlignment="Left"/>
+        <Label x:Name="songAuthorLabel" Content="Sidramon" HorizontalAlignment="Left" Margin="320,51,0,0" VerticalAlignment="Top" FontFamily="Arial Narrow" FontStyle="Italic" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="previousSongButton" HorizontalAlignment="Left" Margin="280,91,0,0" VerticalAlignment="Top" Width="25" Height="25" Background="#00DDDDDD">
             <StackPanel>
-                <Image Source="/Assets/previousBlack.png"/>
+                <Image Source="/Assets/previousBlack.png" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button x:Name="pauseSongButton" HorizontalAlignment="Left" Margin="334,115,0,0" VerticalAlignment="Top" Width="25" Height="25">
+        <Button x:Name="pauseSongButton" HorizontalAlignment="Left" Margin="334,91,0,0" VerticalAlignment="Top" Width="25" Height="25" Background="#00DDDDDD">
             <StackPanel>
-                <Image Source="/Assets/pauseBlack.png"></Image>
+                <Image Source="/Assets/pauseBlack.png" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button x:Name="nextSongButton" HorizontalAlignment="Right" Margin="0,115,230,0" VerticalAlignment="Top" Width="25" Height="25">
+        <Button x:Name="nextSongButton" HorizontalAlignment="Left" Margin="387,91,0,0" VerticalAlignment="Top" Width="25" Height="25" Background="#00DDDDDD" Command="{Binding NextTuneCommand}">
             <StackPanel>
-                <Image Source="/Assets/nextBlack.png"></Image>
+                <Image Source="/Assets/nextBlack.png"/>
             </StackPanel>
         </Button>
     </Grid>

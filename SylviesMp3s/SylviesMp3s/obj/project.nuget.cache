@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ed8+CmMKOzM6OHXOanL9v9Y/Rag8ULUZg7M+3Jay9JD7Dey4gs19VkkxQ3tylTdmBEzSk/vPsgmFivteZyrFzw==",
+  "dgSpecHash": "7fc7JRhUZmwVHwMI86e4++/eO1az3J9MDmRPbPV0aA68grYQjRNb20yYGl8UaNnC2GjL0DRAGcA9UN62BbfRWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
+  "projectFilePath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mathieu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Mathieu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

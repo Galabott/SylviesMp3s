@@ -12,31 +12,11 @@
         <Style TargetType="StatusBar">
             <Setter Property="Height" Value="auto" />
         </Style>
-        <DataTemplate x:Name="test" DataType="{x:Type vm:ListPlayListViewModel}">
-            <views:ListPlayListView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:PlayListViewModel}">
-            <views:PlayListView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:PlayerViewModel}">
-            <views:PlayerView DataContext="{Binding}"/>
+        <DataTemplate x:Name="test" DataType="{x:Type vm:MainContentViewModel}">
+            <views:MainContentView DataContext="{Binding}"/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="4*" />
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="2*"/>
-                </Grid.RowDefinitions>
-                <ContentControl Content="{Binding UpperViewModel}"/>
-                <ContentControl Content="{Binding CentralViewModel}" Grid.Row="1" Grid.Column="1"/>
-            </Grid>
-            <ContentControl Content="{Binding LeftViewModel}"/>
-        </Grid>
+        <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

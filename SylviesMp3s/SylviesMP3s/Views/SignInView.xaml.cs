@@ -18,9 +18,9 @@ namespace SylviesMp3s.Views
     /// <summary>
     /// Logique d'interaction pour SingInView.xaml
     /// </summary>
-    public partial class SingInView : UserControl
+    public partial class SignInView : UserControl
     {
-        public SingInView()
+        public SignInView()
         {
             InitializeComponent();
         }

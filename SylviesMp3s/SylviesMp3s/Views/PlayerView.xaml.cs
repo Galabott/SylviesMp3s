@@ -1,4 +1,5 @@
-﻿using SylviesMp3s.ViewModels;
+﻿using SylviesMp3s.Commands;
+using SylviesMp3s.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace SylviesMp3s.Views
         public PlayerView()
         {
             InitializeComponent();
+            DataContext = new PlayerViewModel();
+            albumCoverImage.Source = new BitmapImage(new Uri("/Assets/albumCover.png", UriKind.Relative));
         }
     }
 }

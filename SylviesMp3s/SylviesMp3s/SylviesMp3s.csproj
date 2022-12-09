@@ -7,7 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\albumCover.png" />
+    <None Remove="Assets\next.png" />
+    <None Remove="Assets\nextBlack.png" />
+    <None Remove="Assets\pause.png" />
+    <None Remove="Assets\pauseBlack.png" />
+    <None Remove="Assets\previous.png" />
+    <None Remove="Assets\previousBlack.png" />
+    <None Remove="Assets\right.png" />
+    <None Remove="Assets\rightBlack.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NAudio" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\albumCover.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\next.png" />
+    <Resource Include="Assets\nextBlack.png" />
+    <Resource Include="Assets\pause.png" />
+    <Resource Include="Assets\pauseBlack.png" />
+    <Resource Include="Assets\previous.png" />
+    <Resource Include="Assets\previousBlack.png" />
+    <Resource Include="Assets\right.png" />
+    <Resource Include="Assets\rightBlack.png" />
   </ItemGroup>
 
 </Project>

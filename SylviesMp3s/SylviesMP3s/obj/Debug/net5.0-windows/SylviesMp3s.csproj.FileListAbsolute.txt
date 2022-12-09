@@ -104,6 +104,7 @@ C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\ref\SylviesMp3s.dll
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.g.cs
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.baml
+<<<<<<< HEAD
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.g.cs
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.g.cs
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.g.cs
@@ -114,3 +115,15 @@ C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debu
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SingInView.baml
+=======
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.baml
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.baml
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.baml
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.baml
+>>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc

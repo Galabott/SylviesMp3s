@@ -21,6 +21,9 @@
         <DataTemplate DataType="{x:Type vm:PlayerViewModel}">
             <views:PlayerView DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AlbumViewModel}">
+            <views:AlbumView DataContext="{Binding}"/>
+        </DataTemplate>
     </UserControl.Resources>
     <Grid>
         <Grid>
@@ -36,7 +39,14 @@
                 <ContentControl Content="{Binding UpperViewModel}"/>
                 <ContentControl Content="{Binding CentralViewModel}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
-            <ContentControl Content="{Binding LeftViewModel}"/>
+            <StackPanel>
+                <WrapPanel>
+                    <Button Width="52" Command="{Binding ChangeLeftViewPlayList}">Playlist</Button>
+                    <Button Width="52"  Command="{Binding ChangeLeftViewAlbum}">Album</Button>
+                    <Button Width="52">Public</Button>
+                </WrapPanel>
+                <ContentControl Content="{Binding LeftViewModel}"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

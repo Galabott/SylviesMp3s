@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SylviesMp3s.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,14 @@ using System.Windows.Shapes;
 namespace SylviesMp3s.Views
 {
     /// <summary>
-    /// Logique d'interaction pour SingInView.xaml
+    /// Logique d'interaction pour AlbumView.xaml
     /// </summary>
-    public partial class SingInView : UserControl
+    public partial class AlbumView : UserControl
     {
-        public SingInView()
+        public AlbumView()
         {
             InitializeComponent();
+            DataContext = new AlbumViewModel();
         }
     }
 }

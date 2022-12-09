@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
-9-404489719
+10-507183564
 
-261280571206
+28-1377577765
 208-487679679
-Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SignInView.xaml;
+Views\AlbumView.xaml;Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SignInView.xaml;
 
 False
 

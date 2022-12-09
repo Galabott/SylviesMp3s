@@ -112,3 +112,5 @@ C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.g.cs
 C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.baml
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.baml

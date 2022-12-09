@@ -54,6 +54,13 @@ namespace SylviesMp3s.ViewModels
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
+        public ListPlayListViewModel()
+        { 
+            AddPlaylistCommand = new RelayCommand(AddPlaylist);
+            DelPlaylistCommand = new RelayCommand(DelPlaylist);
+
+            //Products = (ObservableCollection<Produit>)_db.Produits;
+        }
 
         private void DelPlaylist(object nothig)
         {

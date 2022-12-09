@@ -61,7 +61,7 @@ namespace SylviesMp3s.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SylviesMp3s;V1.0.0.0;component/views/playlistview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SylviesMp3s;component/views/playlistview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PlayListView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

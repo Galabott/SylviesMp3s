@@ -61,7 +61,7 @@ namespace SylviesMp3s.ViewModels
         {
             listPlayListViewModel = new ListPlayListViewModel(this);
             playListViewModel = new PlayListViewModel(this);
-            playerViewModel = new PlayerViewModel();
+            playerViewModel = new PlayerViewModel(this);
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;

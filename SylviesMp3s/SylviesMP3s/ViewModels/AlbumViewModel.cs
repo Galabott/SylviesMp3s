@@ -14,5 +14,9 @@ namespace SylviesMp3s.ViewModels
         {
             this.mcvm = mcvm;
         }
+        public AlbumViewModel()
+        {
+        
+        }
     }
 }

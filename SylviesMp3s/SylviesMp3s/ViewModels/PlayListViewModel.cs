@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -70,8 +71,15 @@ namespace SylviesMp3s.ViewModels
 
         private void AddSong(object nothig)
         {
-            string? _artist = null;
-            string? _genre = null;
+            //ADD PLAYLISTS_TUNES
+
+            string  _artist = "";
+            int?     _length = 0;
+            string? _genre = "";
+            int?     _year = 0;
+            string? _filepath = "";
+            int?    _id_album = 0;
+
             string _title = "My Song #";
 
             int i = 1;
@@ -92,18 +100,15 @@ namespace SylviesMp3s.ViewModels
                 }
             }
 
-
-            int? _year = 2022;
-            bool _is_public = true;
-            string? _album_cover = null;
-
             /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
             /// CHANGER A CURRENT USER WHEN DONE
-            int _id_user = -1;
+            int? _id_user = -1;
 
-            //Tunes A = new Tunes(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            //songs.Add(A);
-            //SelectedSong = A;
+
+            //int _id, string _title, string _artist, int _length, string _genre, int _year, string _filepath, int _id_album, int _id_user
+            Tunes A = new Tunes(_title, _artist, _length, _genre, _year, _filepath, _id_album, _id_user);
+            songs.Add(A);
+            SelectedSong = A;
         }
     }
 }

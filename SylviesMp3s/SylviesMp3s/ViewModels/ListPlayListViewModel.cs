@@ -22,27 +22,6 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand AddPlaylistCommand { get; private set; }
         public RelayCommand DelPlaylistCommand { get; private set; }
 
-        public ObservableCollection<Playlists> PPlaylists
-        {
-            get => pplaylists;
-
-            set
-            {
-                pplaylists = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public Playlists SelectedPlaylist
-        {
-            get => _selectedPlaylist;
-            set
-            {
-                _selectedPlaylist = value;
-                OnPropertyChanged("SelectedPlaylist");
-            }
-
-        }
 
         public MainContentViewModel mcvm { get; set; }
 
@@ -62,11 +41,33 @@ namespace SylviesMp3s.ViewModels
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
 
+        public ObservableCollection<Playlists> PPlaylists
+        {
+            get => mcvm.UserPlaylists;
+
+            set
+            {
+                mcvm.UserPlaylists = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Playlists SelectedPlaylist
+        {
+            get => _selectedPlaylist;
+            set
+            {
+                _selectedPlaylist = value;
+                OnPropertyChanged("SelectedPlaylist");
+            }
+
+        }
+
         private void DelPlaylist(object nothig)
         {
             if (SelectedPlaylist != null)
             {
-                pplaylists.Remove(SelectedPlaylist as Playlists);
+                mcvm.UserPlaylists.Remove(SelectedPlaylist as Playlists);
             }
         }
 
@@ -104,10 +105,10 @@ namespace SylviesMp3s.ViewModels
             int _id_user = -1;
             
             Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            pplaylists.Add(A);
+            mcvm.UserPlaylists.Add(A);
             SelectedPlaylist = A;
 
-            foreach(Playlists n in pplaylists)
+            foreach(Playlists n in mcvm.UserPlaylists)
             {
                 Console.WriteLine(n.Title + "\n");
             }

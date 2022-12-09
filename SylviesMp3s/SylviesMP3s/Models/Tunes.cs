@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SylviesMp3s.Models 
 {
-    class Tunes : INotifyPropertyChanged
+    public class Tunes : INotifyPropertyChanged
     {
         int id = -1;
         string title;

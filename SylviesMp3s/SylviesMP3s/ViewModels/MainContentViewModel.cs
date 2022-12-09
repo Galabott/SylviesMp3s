@@ -2,6 +2,7 @@
 using SylviesMp3s.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,9 @@ namespace SylviesMp3s.ViewModels
     public class MainContentViewModel : BaseViewModel
     {
         private BaseViewModel leftViewModel;
+
+        public ObservableCollection<Playlists> UserPlaylists = new ObservableCollection<Playlists>();
+        public ObservableCollection<Tunes> SelectedPlaylistSongs = new ObservableCollection<Tunes>();
 
         public BaseViewModel LeftViewModel
         {

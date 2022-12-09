@@ -455,43 +455,28 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\G_Bot\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
-=======
-    "C:\\Users\\Mathieu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
       "projectName": "SylviesMp3s",
       "projectPath": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
       "packagesPath": "C:\\Users\\G_Bot\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-      "projectName": "SylviesMp3s",
-      "projectPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-      "packagesPath": "C:\\Users\\Mathieu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\G_Bot\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Mathieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows"

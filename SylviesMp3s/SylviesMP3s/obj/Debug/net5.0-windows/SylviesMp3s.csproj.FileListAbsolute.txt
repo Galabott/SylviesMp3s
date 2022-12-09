@@ -1,45 +1,3 @@
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.exe
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.deps.json
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.runtimeconfig.json
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.runtimeconfig.dev.json
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.pdb
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Asio.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Core.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Midi.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Wasapi.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinForms.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinMM.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.AssemblyReference.cache
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.g.cs
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\App.g.cs
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.cache
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.lref
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.baml
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.g.resources
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfoInputs.cache
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfo.cs
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CoreCompileInputs.cache
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CopyComplete
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\refint\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.pdb
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.genruntimeconfig.cache
-C:\Users\G_Bot\Documents\GitHub\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\ref\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.AssemblyReference.cache
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ListPlayListView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayListView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\App.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.cache
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.lref
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\refint\SylviesMp3s.dll
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.pdb
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayerView.g.cs
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.exe
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.deps.json
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.runtimeconfig.json
@@ -53,77 +11,39 @@ C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debu
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Wasapi.dll
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinForms.dll
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinMM.dll
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.AssemblyReference.cache
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ListPlayListView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayerView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayListView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.cache
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.lref
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.baml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.baml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ListPlayListView.baml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayerView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayListView.baml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.baml
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.g.resources
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfoInputs.cache
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfo.cs
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CoreCompileInputs.cache
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CopyComplete
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.dll
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\refint\SylviesMp3s.dll
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.pdb
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.genruntimeconfig.cache
 C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\ref\SylviesMp3s.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.exe
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.deps.json
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.runtimeconfig.json
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.runtimeconfig.dev.json
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\SylviesMp3s.pdb
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Asio.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Core.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Midi.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.Wasapi.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinForms.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\bin\Debug\net5.0-windows\NAudio.WinMM.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.AssemblyReference.cache
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ListPlayListView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayerView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayListView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\App.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.cache
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s_MarkupCompile.lref
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ListPlayListView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayerView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PlayListView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.g.resources
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfoInputs.cache
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.AssemblyInfo.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CoreCompileInputs.cache
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.csproj.CopyComplete
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\refint\SylviesMp3s.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.pdb
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.genruntimeconfig.cache
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\ref\SylviesMp3s.dll
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.baml
-<<<<<<< HEAD
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SingInView.g.cs
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.baml
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.baml
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\MainContentView.baml
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SingInView.baml
-=======
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ConfirmPasswordView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\ForgotPasswordView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\LogInView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\SignInView.baml
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.g.cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\AlbumView.baml
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc

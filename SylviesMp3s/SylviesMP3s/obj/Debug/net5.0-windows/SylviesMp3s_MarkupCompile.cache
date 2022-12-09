@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
+C:\Users\laure\OneDrive\Desktop\test_git\SylviesMp3s\SylviesMP3s\obj\Debug\net5.0-windows\
 SylviesMp3s
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
-52092606603
+C:\Users\laure\OneDrive\Desktop\test_git\SylviesMp3s\SylviesMP3s\App.xaml
+9-1415766075
 
-22942015597
-208-487679679
-Views\ListPlayListView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;
+26-2030709485
+208-267025688
+Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SingInView.xaml;
 
-False
+True
 

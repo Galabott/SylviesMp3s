@@ -101,9 +101,9 @@ namespace SylviesMp3s.ViewModels
             /// CHANGER A CURRENT USER WHEN DONE
             int _id_user = -1;
 
-            Tunes A = new Tunes(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            songs.Add(A);
-            SelectedSong = A;
+            //Tunes A = new Tunes(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
+            //songs.Add(A);
+            //SelectedSong = A;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SylviesMp3s.Commands;
+using SylviesMp3s.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +50,12 @@ namespace SylviesMp3s.ViewModels
         PlayerViewModel playerViewModel;
 
 
+
+        public RelayCommand ChangeLeftViewPlayList { get; private set; }
+        public RelayCommand ChangeLeftViewAlbum { get; private set; }
+        public RelayCommand ChangeLeftViewPublic { get; private set; }
+
+
         public MainContentViewModel()
         {
             listPlayListViewModel = new ListPlayListViewModel();
@@ -56,7 +64,29 @@ namespace SylviesMp3s.ViewModels
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;
-            upperViewModel = playListViewModel;
+            upperViewModel = playerViewModel;
+
+
+
+
+            ChangeLeftViewPlayList = new RelayCommand(ChangeLeftViewPL);
+            ChangeLeftViewAlbum = new RelayCommand(ChangeLeftViewA);
+            ChangeLeftViewPublic = new RelayCommand(ChangeLeftViewP);
+
+        }
+
+        private void ChangeLeftViewPL(object nothig)
+        {
+            ListPlayListViewModel listPlayListViewModel = new ListPlayListViewModel();
+            LeftViewModel = listPlayListViewModel;
+        }
+        private void ChangeLeftViewA(object nothig)
+        {
+            AlbumViewModel albumViewModel = new AlbumViewModel();
+            LeftViewModel = albumViewModel;
+        }
+        private void ChangeLeftViewP(object nothig)
+        {
 
         }
     }

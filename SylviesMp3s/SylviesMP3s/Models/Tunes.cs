@@ -11,7 +11,7 @@ namespace SylviesMp3s.Models
 {
     class Tunes : INotifyPropertyChanged
     {
-        int id;
+        int id = -1;
         string title;
         string artist;
         int? length;

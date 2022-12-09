@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SylviesMp3s.Models
 {
-    class Playlists : INotifyPropertyChanged
+    public class Playlists : INotifyPropertyChanged
     {
         int id = -1;
         string? artist;
@@ -121,9 +121,5 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("AlbumCover");
             }
         }
-        
-        //bool is_public;
-        //int id_user;
-        //string? album_cover;
     }
 }

@@ -42,21 +42,10 @@ namespace SylviesMp3s.ViewModels
             }
 
         }
-        public MainContentViewModel mcvm { get; set; }
+
         public PlayListViewModel()
         {
 
-            AddTunesCommand = new RelayCommand(AddSong);
-            DelTunesCommand = new RelayCommand(DelSong);
-            UpdateTunesCommand = new RelayCommand(UpdateSong);
-            SaveTunesCommand = new RelayCommand(SaveSong);
-            CancelTunesCommand = new RelayCommand(CancelSong);
-
-            //Products = (ObservableCollection<Produit>)_db.Produits;
-        }
-        public PlayListViewModel(MainContentViewModel mcvm)
-        {
-            this.mcvm = mcvm;
             AddTunesCommand = new RelayCommand(AddSong);
             DelTunesCommand = new RelayCommand(DelSong);
             UpdateTunesCommand = new RelayCommand(UpdateSong);
@@ -112,9 +101,9 @@ namespace SylviesMp3s.ViewModels
             /// CHANGER A CURRENT USER WHEN DONE
             int _id_user = -1;
 
-            /*Tunes A = new Tunes(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            songs.Add(A);
-            SelectedSong = A;*/
+            //Tunes A = new Tunes(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
+            //songs.Add(A);
+            //SelectedSong = A;
         }
     }
 }

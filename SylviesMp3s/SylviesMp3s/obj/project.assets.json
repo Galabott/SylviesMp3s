@@ -455,42 +455,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\G_Bot\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
-=======
-    "C:\\Users\\Mathieu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
+    "C:\\Users\\simon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
+      "projectUniqueName": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
       "projectName": "SylviesMp3s",
-      "projectPath": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-      "packagesPath": "C:\\Users\\G_Bot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\G_Bot\\Documents\\GitHub\\MAINSylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-      "projectName": "SylviesMp3s",
-      "projectPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
-      "packagesPath": "C:\\Users\\Mathieu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mathieu\\Documents\\session5\\analyse objet\\test2\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
+      "projectPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s.csproj",
+      "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\G_Bot\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Mathieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -543,5 +520,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\simon\\Desktop\\Cegep\\Session5\\Analyse objet\\SylviesMp3s\\SylviesMp3s\\SylviesMp3s\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

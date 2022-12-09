@@ -5,7 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SylviesMp3s.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="150" d:DesignWidth="640">
     <Grid>
+        <Image x:Name="albumCoverImage" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" VerticalAlignment="Center" Width="100" Source="/Assets/albumCover.png"/>
+        <Label x:Name="songNameLabel" Content="Axolotl in a bubble" Margin="283,25,224,0" VerticalAlignment="Top" Background="White" FontFamily="Arial Black"/>
+        <Label x:Name="songAuthorLabel" Content="Sidramon" HorizontalAlignment="Left" Margin="320,54,0,0" VerticalAlignment="Top" Background="White" FontFamily="Arial Narrow" FontStyle="Italic"/>
+        <Button x:Name="previousSongButton" HorizontalAlignment="Left" Margin="283,115,0,0" VerticalAlignment="Top" Width="25" Height="25">
+            <StackPanel>
+                <Image Source="/Assets/previousBlack.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="pauseSongButton" HorizontalAlignment="Left" Margin="334,115,0,0" VerticalAlignment="Top" Width="25" Height="25">
+            <StackPanel>
+                <Image Source="/Assets/pauseBlack.png"></Image>
+            </StackPanel>
+        </Button>
+        <Button x:Name="nextSongButton" HorizontalAlignment="Right" Margin="0,115,230,0" VerticalAlignment="Top" Width="25" Height="25">
+            <StackPanel>
+                <Image Source="/Assets/nextBlack.png"></Image>
+            </StackPanel>
+        </Button>
     </Grid>
 </UserControl>

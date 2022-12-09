@@ -44,9 +44,11 @@ namespace SylviesMp3s.ViewModels
 
         }
 
-        public ListPlayListViewModel()
-        {
+        public MainContentViewModel mcvm { get; set; }
 
+        public ListPlayListViewModel(MainContentViewModel mcvm)
+        {
+            this.mcvm = mcvm;
             AddPlaylistCommand = new RelayCommand(AddPlaylist);
             DelPlaylistCommand = new RelayCommand(DelPlaylist);
 

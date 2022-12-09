@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
-=======
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
 SylviesMp3s
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< HEAD
-C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
-9-1415766075
-
-26-2030709485
-2081923427033
-Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SingInView.xaml;
-=======
-C:\Users\Mathieu\Documents\session5\analyse objet\test2\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
 10-507183564
 
 28-1377577765
 208-487679679
 Views\AlbumView.xaml;Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SignInView.xaml;
->>>>>>> e615f5c9474dd030bc27ac05b73bdac7207883fc
 
 False
 

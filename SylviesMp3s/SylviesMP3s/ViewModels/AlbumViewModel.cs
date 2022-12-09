@@ -8,6 +8,11 @@ namespace SylviesMp3s.ViewModels
 {
     internal class AlbumViewModel : BaseViewModel
     {
+        public MainContentViewModel mcvm { get; set; }
 
+        public AlbumViewModel(MainContentViewModel mcvm)
+        {
+            this.mcvm = mcvm;
+        }
     }
 }

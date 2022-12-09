@@ -49,6 +49,7 @@ namespace SylviesMp3s.ViewModels
         PlayListViewModel playListViewModel;
         PlayerViewModel playerViewModel;
 
+        public MainViewModel mvm { get; set; }
 
 
         public RelayCommand ChangeLeftViewPlayList { get; private set; }
@@ -56,17 +57,17 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand ChangeLeftViewPublic { get; private set; }
 
 
-        public MainContentViewModel()
+        public MainContentViewModel( MainViewModel mvm)
         {
-            listPlayListViewModel = new ListPlayListViewModel();
-            playListViewModel = new PlayListViewModel();
+            listPlayListViewModel = new ListPlayListViewModel(this);
+            playListViewModel = new PlayListViewModel(this);
             playerViewModel = new PlayerViewModel();
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;
             upperViewModel = playerViewModel;
 
-
+            this.mvm = mvm;
 
 
             ChangeLeftViewPlayList = new RelayCommand(ChangeLeftViewPL);
@@ -77,17 +78,34 @@ namespace SylviesMp3s.ViewModels
 
         private void ChangeLeftViewPL(object nothig)
         {
-            ListPlayListViewModel listPlayListViewModel = new ListPlayListViewModel();
+            ListPlayListViewModel listPlayListViewModel = new ListPlayListViewModel(this);
             LeftViewModel = listPlayListViewModel;
         }
         private void ChangeLeftViewA(object nothig)
         {
-            AlbumViewModel albumViewModel = new AlbumViewModel();
+            AlbumViewModel albumViewModel = new AlbumViewModel(this);
             LeftViewModel = albumViewModel;
         }
         private void ChangeLeftViewP(object nothig)
         {
 
+        }
+
+        public void changeParentViewModel(BaseViewModel newView)
+        {
+            mvm.CurrentViewModel = newView;
+        }
+        public void changeLeftView(BaseViewModel newView)
+        {
+            LeftViewModel= newView;
+        }
+        public void changeUpperView(BaseViewModel newView)
+        {
+            UpperViewModel = newView;
+        }
+        public void changeCentralView(BaseViewModel newView)
+        {
+            CentralViewModel = newView;
         }
     }
     

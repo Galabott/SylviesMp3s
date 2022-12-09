@@ -25,10 +25,10 @@ namespace SylviesMp3s.ViewModels
 
         public MainViewModel()
         {
-           mainContentViewModel = new MainContentViewModel();
+           mainContentViewModel = new MainContentViewModel(this);
            
             currentViewModel = mainContentViewModel;
-
+            
         }
     }
 }

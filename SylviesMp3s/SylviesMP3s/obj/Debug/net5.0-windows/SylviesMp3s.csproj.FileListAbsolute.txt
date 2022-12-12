@@ -145,3 +145,5 @@ C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\S
 C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.pdb
 C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\SylviesMp3s.genruntimeconfig.cache
 C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\ref\SylviesMp3s.dll
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PublicPlaylistView.g.cs
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\Views\PublicPlaylistView.baml

@@ -53,6 +53,7 @@ namespace SylviesMp3s.ViewModels
         PlayListViewModel playListViewModel;
         PlayerViewModel playerViewModel;
         AlbumViewModel albumViewModel;
+        PublicPlaylistViewModel publicPlaylistViewModel;
 
         public MainViewModel mvm { get; set; }
 
@@ -68,6 +69,7 @@ namespace SylviesMp3s.ViewModels
             playListViewModel = new PlayListViewModel(this);
             playerViewModel = new PlayerViewModel(this);
             albumViewModel = new AlbumViewModel(this);
+            publicPlaylistViewModel = new PublicPlaylistViewModel(this);
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;
@@ -92,7 +94,7 @@ namespace SylviesMp3s.ViewModels
         }
         private void ChangeLeftViewP(object nothig)
         {
-
+            LeftViewModel = publicPlaylistViewModel;
         }
 
         public void changeParentViewModel(BaseViewModel newView)

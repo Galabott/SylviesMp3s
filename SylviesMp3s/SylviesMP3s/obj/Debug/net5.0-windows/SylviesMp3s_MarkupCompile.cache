@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
 SylviesMp3s
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
-10-507183564
+C:\Users\Mathieu\Documents\session5\analyse objet\test\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
+11-1239044778
 
-28-1377577765
-2081653618295
-Views\AlbumView.xaml;Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SignInView.xaml;
+30-2076907603
+208-487679679
+Views\AlbumView.xaml;Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\PublicPlaylistView.xaml;Views\SignInView.xaml;
 
 False
 

@@ -5,12 +5,18 @@
     <Compile Update="Views\AlbumView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\PublicPlaylistView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\AlbumView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainContentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PublicPlaylistView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -4,21 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\obj\Debug\net5.0-windows\
 SylviesMp3s
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\simon\Desktop\Cegep\Session5\Sujets spéciaux\SylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
+C:\Users\G_Bot\Documents\GitHub\MAINSylviesMp3s\SylviesMp3s\SylviesMp3s\App.xaml
 10-507183564
 
 30-1255814350
-<<<<<<< HEAD
-193-1891726104
-=======
-2081653618295
->>>>>>> ca04801540b1df3541f5c23de5f6f42a9ff0fb8b
+2081923427033
 Views\AlbumView.xaml;Views\ConfirmPasswordView.xaml;Views\ForgotPasswordView.xaml;Views\ListPlayListView.xaml;Views\LogInView.xaml;Views\MainContentView.xaml;Views\MainView.xaml;Views\PlayerView.xaml;Views\PlayListView.xaml;Views\SignInView.xaml;
 
-False
+True
 

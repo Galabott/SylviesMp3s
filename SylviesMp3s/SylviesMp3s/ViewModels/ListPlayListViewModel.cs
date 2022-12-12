@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SylviesMp3s.ViewModels
 {
@@ -31,8 +32,12 @@ namespace SylviesMp3s.ViewModels
             AddPlaylistCommand = new RelayCommand(AddPlaylist);
             DelPlaylistCommand = new RelayCommand(DelPlaylist);
 
+            _selectedPlaylist = new Playlists("Select a playlist", "Select a playlist", "Select a playlist", 0, false, -1, "Select a playlist");
+
+
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
+
         public ListPlayListViewModel()
         { 
             AddPlaylistCommand = new RelayCommand(AddPlaylist);
@@ -71,6 +76,17 @@ namespace SylviesMp3s.ViewModels
             }
         }
 
+        bool enabled = false;
+        private void UpdatePlaylist(object nothig)
+        {
+            //if (SelectedPlaylist != null)
+            //{
+            //    mcvm.UserPlaylists.Remove(SelectedPlaylist as Playlists);
+            //}
+            //a7 b3 PLAYLISTS
+
+        }
+
         private void AddPlaylist(object nothig)
         {
             string? _artist = null;
@@ -97,7 +113,7 @@ namespace SylviesMp3s.ViewModels
 
 
             int? _year = 2022;
-            bool _is_public = true;
+            bool _is_public = false;
             string? _album_cover = null;
 
             /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
@@ -113,5 +129,6 @@ namespace SylviesMp3s.ViewModels
                 Console.WriteLine(n.Title + "\n");
             }
         }
+
     }
 }

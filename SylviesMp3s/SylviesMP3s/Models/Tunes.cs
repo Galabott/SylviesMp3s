@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SylviesMp3s.Models 
 {
-    class Tunes : INotifyPropertyChanged
+    public class Tunes : INotifyPropertyChanged
     {
         int id = -1;
         string title;
@@ -23,7 +23,7 @@ namespace SylviesMp3s.Models
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Tunes(int _id, string _title, string _artist, int _length, string _genre, int _year, string _filepath, int _id_album, int _id_user)
+        public Tunes(int _id, string _title, string _artist, int? _length, string? _genre, int? _year, string? _filepath, int? _id_album, int? _id_user)
         {
             this.id = _id;
             this.title = _title;
@@ -36,7 +36,7 @@ namespace SylviesMp3s.Models
             this.id_user = _id_user;
         }
 
-        public Tunes(string _title, string _artist, int _length, string _genre, int _year, string _filepath, int _id_album, int _id_user)
+        public Tunes(string _title, string _artist, int? _length, string? _genre, int? _year, string? _filepath, int? _id_album, int? _id_user)
         {
             this.title = _title;
             this.artist = _artist;

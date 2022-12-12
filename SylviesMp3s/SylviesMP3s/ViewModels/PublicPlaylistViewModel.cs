@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SylviesMp3s.ViewModels
 {
-    internal class AlbumViewModel : BaseViewModel
+    internal class PublicPlaylistViewModel : BaseViewModel
     {
         //private ProduitDataService _db = new ProduitDataService();
 
@@ -44,7 +44,7 @@ namespace SylviesMp3s.ViewModels
 
         public MainContentViewModel mcvm { get; set; }
 
-        public AlbumViewModel(MainContentViewModel mcvm)
+        public PublicPlaylistViewModel(MainContentViewModel mcvm)
         {
             this.mcvm = mcvm;
             AddPlaylistCommand = new RelayCommand(AddAlbum);
@@ -52,7 +52,7 @@ namespace SylviesMp3s.ViewModels
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
-        public AlbumViewModel()
+        public PublicPlaylistViewModel()
         {
             AddPlaylistCommand = new RelayCommand(AddAlbum);
             DelPlaylistCommand = new RelayCommand(DelAlbum);
@@ -72,7 +72,7 @@ namespace SylviesMp3s.ViewModels
         {
             string? _artist = null;
             string? _genre = null;
-            string _title = "MonAlbum #";
+            string _title = "Playlist public #";
 
             int i = 1;
             bool goodName = false;
@@ -112,4 +112,3 @@ namespace SylviesMp3s.ViewModels
         }
     }
 }
-

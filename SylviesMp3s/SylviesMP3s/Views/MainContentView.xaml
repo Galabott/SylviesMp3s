@@ -24,6 +24,9 @@
         <DataTemplate DataType="{x:Type vm:AlbumViewModel}">
             <views:AlbumView DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PublicPlaylistViewModel}">
+            <views:PublicPlaylistView DataContext="{Binding}"/>
+        </DataTemplate>
     </UserControl.Resources>
     <Grid>
         <Grid>
@@ -43,7 +46,7 @@
                 <WrapPanel>
                     <Button Width="52" Command="{Binding ChangeLeftViewPlayList}">Playlist</Button>
                     <Button Width="52"  Command="{Binding ChangeLeftViewAlbum}">Album</Button>
-                    <Button Width="52">Public</Button>
+                    <Button Width="52" Command="{Binding ChangeLeftViewPublic}">Public</Button>
                 </WrapPanel>
                 <ContentControl Content="{Binding LeftViewModel}"/>
             </StackPanel>

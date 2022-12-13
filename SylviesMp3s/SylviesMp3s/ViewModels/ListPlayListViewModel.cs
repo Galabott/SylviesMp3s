@@ -123,11 +123,6 @@ namespace SylviesMp3s.ViewModels
             Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
             mcvm.UserPlaylists.Add(A);
             SelectedPlaylist = A;
-
-            foreach(Playlists n in mcvm.UserPlaylists)
-            {
-                Console.WriteLine(n.Title + "\n");
-            }
         }
 
     }

@@ -15,6 +15,7 @@ namespace SylviesMp3s.ViewModels
 
         public ObservableCollection<Playlists> UserPlaylists = new ObservableCollection<Playlists>();
         public ObservableCollection<Tunes> SelectedPlaylistSongs = new ObservableCollection<Tunes>();
+        public ObservableCollection<Playlists> PublicPlaylists = new ObservableCollection<Playlists>();
 
         public BaseViewModel LeftViewModel
         {

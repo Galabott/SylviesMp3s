@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:SylviesMp3s.ViewModels"
         xmlns:views="clr-namespace:SylviesMp3s.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     <Window.Resources>
         <Style TargetType="StatusBar">
             <Setter Property="Height" Value="auto" />

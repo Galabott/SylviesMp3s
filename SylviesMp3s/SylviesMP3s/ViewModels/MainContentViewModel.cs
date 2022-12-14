@@ -20,6 +20,8 @@ namespace SylviesMp3s.ViewModels
         public ObservableCollection<Playlists> UserPlaylists = new ObservableCollection<Playlists>();
         public ObservableCollection<Tunes> SelectedPlaylistSongs = new ObservableCollection<Tunes>();
         public ObservableCollection<Playlists> PublicPlaylists = new ObservableCollection<Playlists>();
+        public ObservableCollection<Playlists> UserAlbums = new ObservableCollection<Playlists>();
+
 
         public MarthaProcessor _db = MarthaProcessor.Instance;
 
@@ -98,6 +100,7 @@ namespace SylviesMp3s.ViewModels
             LoadSongs(1);
             LoadUserPlaylists();
             LoadPublicPlaylists();
+            LoadUserAlbums();
         }
 
         public void ChangeCurrentPlayList(int playlistid)
@@ -110,10 +113,13 @@ namespace SylviesMp3s.ViewModels
         private void RefreshList()
         {
             UserPlaylists = new ObservableCollection<Playlists>();
+            UserAlbums = new ObservableCollection<Playlists>();
 
             LoadUserPlaylists();
+            LoadUserAlbums();
 
             listPlayListViewModel.PPlaylists = UserPlaylists;
+            albumViewModel.PPlaylists = UserAlbums;
         }
 
         private void RefreshPublicList()
@@ -222,17 +228,37 @@ namespace SylviesMp3s.ViewModels
             }
         }
 
+        public async void LoadUserAlbums()
+        {
+            if (CurrentUserID != -1)
+            {
+                JsonObject b = new JsonObject();
+                b.Add("userid", CurrentUserID);
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("select-album-from-user", b);
+
+                List<Playlists> lol = new List<Playlists>();
+
+                lol = MarthaResponseConverter<Playlists>.Convert(mresponse);
+
+                foreach (Playlists m in lol)
+                {
+                    UserAlbums.Add(m);
+                }
+            }
+        }
+
         private void ChangeLeftViewPL(object nothig)
         { 
-            LeftViewModel = listPlayListViewModel;
+            LeftViewModel = new ListPlayListViewModel(this);
         }
         private void ChangeLeftViewA(object nothig)
         {
-            LeftViewModel = albumViewModel;
+            LeftViewModel = new AlbumViewModel(this);
         }
         private void ChangeLeftViewP(object nothig)
         {
-            LeftViewModel = publicPlaylistViewModel;
+            LeftViewModel = new PublicPlaylistViewModel(this);
         }
 
         public void changeParentViewModel(BaseViewModel newView)

@@ -7,8 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <WrapPanel Orientation="Vertical">
-        <ListBox  Name="PLAYLISTS" DisplayMemberPath="Title" Height="339" Width="158" ItemsSource="{Binding PPlaylists, Mode=TwoWay}" SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"/>
-        <Button Content="Add a playlist" Command="{Binding AddPlaylistCommand}" />
-        <Button Content="Remove selected playlist" Command="{Binding DelPlaylistCommand}" />
+        <ListBox  Name="PLAYLISTS" DisplayMemberPath="Title" Height="119" Width="158" ItemsSource="{Binding PPlaylists, Mode=TwoWay}" SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"/>
+        <Label Content="Name" />
+        <TextBox Name="A1" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Title, Mode=TwoWay}"/>
+        <Label Content="Artist" />
+        <TextBox Name="A2" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Artist, Mode=TwoWay}"/>
+        <Label Content="Genre" />
+        <TextBox Name="A3" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Genre, Mode=TwoWay}"/>
+        <Label Content="Year" />
+        <TextBox Name="A4" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Year, Mode=TwoWay}"/>
+        <Label Content="Album Cover Path" />
+        <TextBox Name="A5" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.AlbumCover, Mode=TwoWay}"/>
+        <WrapPanel Orientation="Horizontal">
+            <Label Content="IsPublic?" />
+            <CheckBox IsEnabled="False" Name="C1" Height="16" Width="23" IsChecked="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Is_Public, Mode=TwoWay}"/>
+        </WrapPanel>
+        <Button Name="B1" Content="Add an album" Command="{Binding AddPlaylistCommand}" />
+        <Button Name="B2" Content="Remove selected album" Command="{Binding DelPlaylistCommand}" />
+        <Button Name="B3" Content="Update selected album" Command="{Binding UpdatePlaylistCommand}" Click="B3_Click" />
+        <Button Name="A6" Content="Save Changes" Command="{Binding SavePlaylistCommand}" IsEnabled="False" Click="A6_Click" />
+        <Button Name="A7" Content="Cancel Changes" Command="{Binding CancelPlaylistCommand}" IsEnabled="False" Click="A7_Click" />
+
     </WrapPanel>
 </UserControl>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace SylviesMp3s.ViewModels
@@ -19,27 +20,18 @@ namespace SylviesMp3s.ViewModels
 
         public RelayCommand AddPlaylistCommand { get; private set; }
         public RelayCommand DelPlaylistCommand { get; private set; }
+        public RelayCommand SavePlaylistCommand { get; private set; }
+
 
         public ObservableCollection<Playlists> PPlaylists
         {
-            get => pplaylists;
+            get => mcvm.UserAlbums;
 
             set
             {
-                pplaylists = value;
+                mcvm.UserAlbums = value;
                 OnPropertyChanged();
             }
-        }
-
-        public Playlists SelectedPlaylist
-        {
-            get => _selectedPlaylist;
-            set
-            {
-                _selectedPlaylist = value;
-                OnPropertyChanged("SelectedPlaylist");
-            }
-
         }
 
         public MainContentViewModel mcvm { get; set; }
@@ -49,6 +41,7 @@ namespace SylviesMp3s.ViewModels
             this.mcvm = mcvm;
             AddPlaylistCommand = new RelayCommand(AddAlbum);
             DelPlaylistCommand = new RelayCommand(DelAlbum);
+            SavePlaylistCommand = new RelayCommand(SaveAlbum);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
@@ -56,23 +49,67 @@ namespace SylviesMp3s.ViewModels
         {
             AddPlaylistCommand = new RelayCommand(AddAlbum);
             DelPlaylistCommand = new RelayCommand(DelAlbum);
+            SavePlaylistCommand = new RelayCommand(SaveAlbum);
+
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
+        }
+
+        public Playlists SelectedPlaylist
+        {
+            get => _selectedPlaylist;
+            set
+            {
+                _selectedPlaylist = value;
+                OnPropertyChanged("SelectedPlaylist");
+                if (_selectedPlaylist != null)
+                {
+                    mcvm.ChangeCurrentPlayList(SelectedPlaylist.Id);
+                }
+            }
+
         }
 
         private void DelAlbum(object nothig)
         {
             if (SelectedPlaylist != null)
             {
-                pplaylists.Remove(SelectedPlaylist as Playlists);
+                JsonObject playlist = new JsonObject();
+                playlist.Add("userid", mcvm.CurrentUserID);
+                playlist.Add("playlistid", SelectedPlaylist.Id);
+                mcvm.DelPlaylist(playlist);
             }
+        }
+
+        bool enabled = false;
+        private void SaveAlbum(object nothig)
+        {
+            if (SelectedPlaylist != null)
+            {
+                JsonObject playlist = new JsonObject();
+                playlist.Add("playlistid", SelectedPlaylist.Id);
+                playlist.Add("artist", SelectedPlaylist.Artist);
+                playlist.Add("genre", SelectedPlaylist.Genre);
+                playlist.Add("title", SelectedPlaylist.Title);
+                playlist.Add("year", SelectedPlaylist.Year);
+                playlist.Add("is_public", SelectedPlaylist.Is_Public);
+                playlist.Add("id_user", mcvm.CurrentUserID);
+                playlist.Add("album_cover", SelectedPlaylist.Album_Cover);
+
+                mcvm.SavePlaylist(playlist);
+            }
+        }
+
+        public void TriggerPlaylistEvent()
+        {
+            OnPropertyChanged();
         }
 
         private void AddAlbum(object nothig)
         {
-            string? _artist = null;
+            string? _artist = "unknown";
             string? _genre = null;
-            string _title = "MonAlbum #";
+            string _title = "My Album #";
 
             int i = 1;
             bool goodName = false;
@@ -94,21 +131,20 @@ namespace SylviesMp3s.ViewModels
 
 
             int? _year = 2022;
-            int _is_public = 1;
+            int _is_public = 0;
             string? _album_cover = null;
 
-            /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
-            /// CHANGER A CURRENT USER WHEN DONE
-            int _id_user = -1;
+            JsonObject playlist = new JsonObject();
+            playlist.Add("artist", _artist);
+            playlist.Add("genre", _genre);
+            playlist.Add("title", _title);
+            playlist.Add("year", _year);
+            playlist.Add("is_public", _is_public);
+            playlist.Add("id_user", mcvm.CurrentUserID);
+            playlist.Add("album_cover", _album_cover);
+            //"?", "?genre", "?title", ?year, ?is_public, ?id_user, "?album_cover"
 
-            Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            pplaylists.Add(A);
-            SelectedPlaylist = A;
-
-            foreach (Playlists n in pplaylists)
-            {
-                Console.WriteLine(n.Title + "\n");
-            }
+            mcvm.AddPlaylist(playlist);
         }
     }
 }

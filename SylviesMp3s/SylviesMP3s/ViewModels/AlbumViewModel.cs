@@ -94,7 +94,7 @@ namespace SylviesMp3s.ViewModels
 
 
             int? _year = 2022;
-            bool _is_public = true;
+            int _is_public = 1;
             string? _album_cover = null;
 
             /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 

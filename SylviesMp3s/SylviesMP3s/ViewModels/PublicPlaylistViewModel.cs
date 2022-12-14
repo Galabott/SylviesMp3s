@@ -1,6 +1,7 @@
 ﻿using SylviesMp3s.Commands;
 using SylviesMp3s.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -22,11 +23,12 @@ namespace SylviesMp3s.ViewModels
 
         public ObservableCollection<Playlists> PPlaylists
         {
-            get => pplaylists;
+
+            get => mcvm.PublicPlaylists;
 
             set
             {
-                pplaylists = value;
+                mcvm.UserPlaylists = value;
                 OnPropertyChanged();
             }
         }
@@ -47,67 +49,45 @@ namespace SylviesMp3s.ViewModels
         public PublicPlaylistViewModel(MainContentViewModel mcvm)
         {
             this.mcvm = mcvm;
-            AddPlaylistCommand = new RelayCommand(AddAlbum);
-            DelPlaylistCommand = new RelayCommand(DelAlbum);
+            AddPlaylistCommand = new RelayCommand(AddPublicPlaylistToUserLibrary);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
+
+            //Test Public Playlist
+            string? _artist = null;
+            string? _genre = null;
+            string _title = "Public Playlist #";
+            int i = 1;
+            bool goodName = false;
+            while (!goodName){Playlists compareTo;try{compareTo = PPlaylists.Where(x => x.Title == _title + i).First();i++;}catch{goodName = true;_title += i;}}
+            int? _year = 2022;
+            int _is_public = 1;
+            string? _album_cover = null;
+            int _id_user = -1;
+            Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
+            mcvm.PublicPlaylists.Add(A);
+            //Test Public Playlist
+
         }
         public PublicPlaylistViewModel()
         {
-            AddPlaylistCommand = new RelayCommand(AddAlbum);
-            DelPlaylistCommand = new RelayCommand(DelAlbum);
+            AddPlaylistCommand = new RelayCommand(AddPublicPlaylistToUserLibrary);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
 
-        private void DelAlbum(object nothig)
+        private void AddPublicPlaylistToUserLibrary(object nothig)
         {
-            if (SelectedPlaylist != null)
+
+            Playlists compareTo;
+            try
             {
-                pplaylists.Remove(SelectedPlaylist as Playlists);
+                //Eventuellement le faire avec l'ID de la playlist
+                compareTo = mcvm.UserPlaylists.Where(x => x.Title == SelectedPlaylist.Title).First();
             }
-        }
-
-        private void AddAlbum(object nothig)
-        {
-            string? _artist = null;
-            string? _genre = null;
-            string _title = "Playlist public #";
-
-            int i = 1;
-            bool goodName = false;
-
-            while (!goodName)
+            catch
             {
-                Playlists compareTo;
-                try
-                {
-                    compareTo = PPlaylists.Where(x => x.Title == _title + i).First();
-                    i++;
-                }
-                catch
-                {
-                    goodName = true;
-                    _title += i;
-                }
-            }
-
-
-            int? _year = 2022;
-            bool _is_public = true;
-            string? _album_cover = null;
-
-            /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
-            /// CHANGER A CURRENT USER WHEN DONE
-            int _id_user = -1;
-
-            Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            pplaylists.Add(A);
-            SelectedPlaylist = A;
-
-            foreach (Playlists n in pplaylists)
-            {
-                Console.WriteLine(n.Title + "\n");
+                mcvm.UserPlaylists.Add(SelectedPlaylist);
             }
         }
     }

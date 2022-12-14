@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SylviesMp3s.Models
@@ -14,23 +15,26 @@ namespace SylviesMp3s.Models
         string? genre;
         string title;
         int? year;
-        bool is_public;
+        int is_public;
         int id_user;
         string? album_cover;
 
+        int publicIntToBool;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Playlists(int _id, string? _artist, string? _genre, string _title, int? _year, bool _is_public, int _id_user, string? _album_cover){
-            this.id = _id;
-            this.artist = _artist;
-            this.genre = _genre;
-            this.title = _title;
-            this.year = _year;
-            this.is_public = _is_public;
-            this.id_user = _id_user;
-            this.album_cover = _album_cover;
+        [JsonConstructor]
+        public Playlists(int id, string? artist, string? genre, string title, int? year, int is_public, int id_user, string? album_cover){
+            this.id =           id;
+            this.artist =       artist;
+            this.genre =        genre;
+            this.title =        title;
+            this.year =         year;
+            this.is_public =    is_public;
+            this.id_user =      id_user;
+            this.album_cover =  album_cover;
         }
-        public Playlists(string? _artist, string? _genre, string _title, int? _year, bool _is_public, int _id_user, string? _album_cover)
+        public Playlists(string? _artist, string? _genre, string _title, int? _year, int _is_public, int _id_user, string? _album_cover)
         {
             this.artist = _artist;
             this.genre = _genre;
@@ -49,6 +53,7 @@ namespace SylviesMp3s.Models
             }
         }
 
+        [JsonInclude]
         public int Id {
             get => id;
             set
@@ -57,7 +62,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("LastConnection");
             }
         }
-
+        [JsonInclude]
         public string? Artist
         {
             get => artist;
@@ -67,6 +72,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Artist");
             }
         }
+        [JsonInclude]
         public string? Genre
         {
             get => genre;
@@ -76,6 +82,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Genre");
             }
         }
+        [JsonInclude]
         public string Title 
         {
             get => title;
@@ -85,6 +92,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Title");
             }
         }
+        [JsonInclude]
         public int? Year
         {
             get => year;
@@ -94,16 +102,20 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Year");
             }
         }
-        public bool IsPublic
+        [JsonInclude]
+        public int Is_Public
         {
             get => is_public;
             set
             {
+
                 is_public = value;
                 NotifyPropertyChanged("IsPublic");
             }
         }
-        public int IdUser
+
+        [JsonInclude]
+        public int Id_User
         {
             get => id_user;
             set
@@ -112,7 +124,8 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("IdUser");
             }
         }
-        public string? AlbumCover 
+        [JsonInclude]
+        public string? Album_Cover 
         {
             get => album_cover;
             set

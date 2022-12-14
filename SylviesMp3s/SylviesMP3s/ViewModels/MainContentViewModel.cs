@@ -106,6 +106,15 @@ namespace SylviesMp3s.ViewModels
             CentralViewModel= new PlayListViewModel(this);
         }
 
+        private void RefreshList()
+        {
+            UserPlaylists = new ObservableCollection<Playlists>();
+
+            LoadUserPlaylists();
+
+            listPlayListViewModel.PPlaylists = UserPlaylists;
+        }
+
         public async void LoadSongs(int playlistid)
         {
             if (CurrentUserID != -1)
@@ -125,9 +134,39 @@ namespace SylviesMp3s.ViewModels
                     SelectedPlaylistSongs.Add(m);
                 }
             }
-            
+        }
 
-           // Console.WriteLine(lol.First().Title);
+        public async void AddPlaylist(JsonObject playlist)
+        {
+            if (CurrentUserID != -1)
+            {
+
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
+
+                RefreshList();
+            }
+        }
+
+        public async void DelPlaylist(JsonObject playlist)
+        {
+            if (CurrentUserID != -1)
+            {
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("delete-playlist", playlist);
+
+                RefreshList();
+            }
+        }
+        public async void SavePlaylist(JsonObject playlist)
+        {
+            if (CurrentUserID != -1)
+            {
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("update-playlist", playlist);
+
+                RefreshList();
+            }
         }
 
         public async void LoadUserPlaylists()

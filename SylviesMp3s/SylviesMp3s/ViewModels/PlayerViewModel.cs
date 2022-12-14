@@ -67,7 +67,7 @@ namespace SylviesMp3s.ViewModels
         }
         private void ProgressBarInit()
         {
-            view.songProgessBar.Maximum = 10; // song length
+            view.songProgessBar.Maximum = 20; // song length
 
             worker = new BackgroundWorker();
             worker.WorkerSupportsCancellation = true;
@@ -81,7 +81,7 @@ namespace SylviesMp3s.ViewModels
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i < 10 + 1; i++) // song length
+            for (int i = 0; i < 20 + 1; i++) // song length
             {
                 if (stopThread)
                 {

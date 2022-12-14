@@ -51,6 +51,13 @@ namespace SylviesMp3s.Views
             int year = 0;
             b4changes = new Playlists(null, null, A1.Text, year, CheckCheckbox(), -1, null);
             A1.IsEnabled = true;
+            A2.IsEnabled = true;
+            A3.IsEnabled = true;
+            A4.IsEnabled = true;
+            A5.IsEnabled = true;
+
+
+
             A6.IsEnabled = true;
             A7.IsEnabled = true;
 
@@ -69,6 +76,10 @@ namespace SylviesMp3s.Views
             A1.IsEnabled = false;
             A6.IsEnabled = false;
             A7.IsEnabled = false;
+            A2.IsEnabled = false;
+            A3.IsEnabled = false;
+            A4.IsEnabled = false;
+            A5.IsEnabled = false;
 
             B1.IsEnabled = true;
             B2.IsEnabled = true;

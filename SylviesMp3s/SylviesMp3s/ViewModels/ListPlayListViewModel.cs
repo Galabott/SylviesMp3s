@@ -106,11 +106,6 @@ namespace SylviesMp3s.ViewModels
             }
         }
 
-        public void TriggerPlaylistEvent()
-        {
-            OnPropertyChanged();
-        }
-
         private void AddPlaylist(object nothig)
         {
             string? _artist = null;

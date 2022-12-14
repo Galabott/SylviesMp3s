@@ -20,6 +20,8 @@ namespace SylviesMp3s.ViewModels
         public ObservableCollection<Playlists> UserPlaylists = new ObservableCollection<Playlists>();
         public ObservableCollection<Tunes> SelectedPlaylistSongs = new ObservableCollection<Tunes>();
         public ObservableCollection<Playlists> PublicPlaylists = new ObservableCollection<Playlists>();
+        public ObservableCollection<Playlists> UserAlbums = new ObservableCollection<Playlists>();
+
 
         public MarthaProcessor _db = MarthaProcessor.Instance;
 
@@ -97,6 +99,8 @@ namespace SylviesMp3s.ViewModels
             //TEST DB
             LoadSongs(1);
             LoadUserPlaylists();
+            LoadPublicPlaylists();
+            LoadUserAlbums();
         }
 
         public void ChangeCurrentPlayList(int playlistid)
@@ -109,10 +113,22 @@ namespace SylviesMp3s.ViewModels
         private void RefreshList()
         {
             UserPlaylists = new ObservableCollection<Playlists>();
+            UserAlbums = new ObservableCollection<Playlists>();
 
             LoadUserPlaylists();
+            LoadUserAlbums();
 
             listPlayListViewModel.PPlaylists = UserPlaylists;
+            albumViewModel.PPlaylists = UserAlbums;
+        }
+
+        private void RefreshPublicList()
+        {
+            PublicPlaylists = new ObservableCollection<Playlists>();
+
+            LoadPublicPlaylists();
+
+            publicPlaylistViewModel.PPlaylists = PublicPlaylists;
         }
 
         public async void LoadSongs(int playlistid)
@@ -169,6 +185,29 @@ namespace SylviesMp3s.ViewModels
             }
         }
 
+        public async void LoadPublicPlaylists()
+        {
+            if (CurrentUserID != -1)
+            {
+                JsonObject b = new JsonObject();
+                b.Add("userid", CurrentUserID);
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("select-all-public-playlists", b);
+
+                List<Playlists> lol = new List<Playlists>();
+
+                lol = MarthaResponseConverter<Playlists>.Convert(mresponse);
+
+                foreach (Playlists m in lol)
+                {
+                    PublicPlaylists.Add(m);
+                }
+            }
+
+
+            // Console.WriteLine(lol.First().Title);
+        }
+
         public async void LoadUserPlaylists()
         {
             if (CurrentUserID != -1)
@@ -187,17 +226,36 @@ namespace SylviesMp3s.ViewModels
                     UserPlaylists.Add(m);
                 }
             }
-                
+        }
 
-            // Console.WriteLine(lol.First().Title);
+        public async void LoadUserAlbums()
+        {
+            if (CurrentUserID != -1)
+            {
+                JsonObject b = new JsonObject();
+                b.Add("userid", CurrentUserID);
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("select-album-from-user", b);
+
+                List<Playlists> lol = new List<Playlists>();
+
+                lol = MarthaResponseConverter<Playlists>.Convert(mresponse);
+
+                foreach (Playlists m in lol)
+                {
+                    UserAlbums.Add(m);
+                }
+            }
         }
 
         private void ChangeLeftViewPL(object nothig)
-        { 
+        {
+            listPlayListViewModel.SelectedPlaylist = null;
             LeftViewModel = listPlayListViewModel;
         }
         private void ChangeLeftViewA(object nothig)
         {
+            albumViewModel.SelectedPlaylist = null;
             LeftViewModel = albumViewModel;
         }
         private void ChangeLeftViewP(object nothig)

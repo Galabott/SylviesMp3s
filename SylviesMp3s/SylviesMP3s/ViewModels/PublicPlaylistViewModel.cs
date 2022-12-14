@@ -95,7 +95,7 @@ namespace SylviesMp3s.ViewModels
                     playlist.Add("genre", SelectedPlaylist.Genre);
                     playlist.Add("title", SelectedPlaylist.Title);
                     playlist.Add("year", SelectedPlaylist.Year);
-                    playlist.Add("is_public", SelectedPlaylist.Is_Public);
+                    playlist.Add("is_public", 0);
                     playlist.Add("id_user", mcvm.CurrentUserID);
                     playlist.Add("album_cover", SelectedPlaylist.Album_Cover);
 

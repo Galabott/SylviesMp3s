@@ -84,7 +84,7 @@ namespace SylviesMp3s.ViewModels
 
             LeftViewModel = listPlayListViewModel;
             CentralViewModel = playListViewModel;
-            upperViewModel = playerViewModel;
+            UpperViewModel = playerViewModel;
 
             this.mvm = mvm;
 
@@ -97,6 +97,13 @@ namespace SylviesMp3s.ViewModels
             //TEST DB
             LoadSongs(1);
             LoadUserPlaylists();
+        }
+
+        public void ChangeCurrentPlayList(int playlistid)
+        {
+            SelectedPlaylistSongs.Clear();
+            LoadSongs(playlistid);
+            CentralViewModel= new PlayListViewModel(this);
         }
 
         public async void LoadSongs(int playlistid)

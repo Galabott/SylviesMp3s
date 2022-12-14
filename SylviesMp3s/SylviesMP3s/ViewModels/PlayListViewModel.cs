@@ -68,7 +68,9 @@ namespace SylviesMp3s.ViewModels
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
 
-        private void UpdateSong(object nothig) {}
+        private void UpdateSong(object nothig) {
+
+        }
         private void SaveSong(object nothig) {}
         private void CancelSong(object nothig) { }
 

@@ -24,7 +24,7 @@ namespace SylviesMp3s.ViewModels
 
         public ObservableCollection<Tunes> Songs
         {
-            get => songs;
+            get => mcvm.SelectedPlaylistSongs;
 
             set
             {
@@ -119,7 +119,7 @@ namespace SylviesMp3s.ViewModels
 
             //int _id, string _title, string _artist, int _length, string _genre, int _year, string _filepath, int _id_album, int _id_user
             Tunes A = new Tunes(_title, _artist, _length, _genre, _year, _filepath, _id_album, _id_user);
-            songs.Add(A);
+            mcvm.SelectedPlaylistSongs.Add(A);
             SelectedSong = A;
         }
     }

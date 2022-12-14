@@ -61,7 +61,7 @@ namespace SylviesMp3s.ViewModels
             bool goodName = false;
             while (!goodName){Playlists compareTo;try{compareTo = PPlaylists.Where(x => x.Title == _title + i).First();i++;}catch{goodName = true;_title += i;}}
             int? _year = 2022;
-            bool _is_public = true;
+            int _is_public = 1;
             string? _album_cover = null;
             int _id_user = -1;
             Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);

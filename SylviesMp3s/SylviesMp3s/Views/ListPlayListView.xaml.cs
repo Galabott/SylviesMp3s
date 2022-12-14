@@ -39,9 +39,18 @@ namespace SylviesMp3s.Views
             /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
             /// CHANGE IDUSER
             bool ispublic = C1.IsEnabled;
+            int pubint = -1;
+            if (ispublic)
+            {
+                pubint = 1;
+            }
+            else
+            {
+                pubint = 0;
+            }
             int year = 0;
             Int32.TryParse(A4.Text.ToString(), out year);
-            b4changes = new Playlists(A2.Text, A3.Text, A1.Text, year, ispublic, -1, A5.Text);
+            b4changes = new Playlists(A2.Text, A3.Text, A1.Text, year, pubint, -1, A5.Text);
             A1.IsEnabled = true;
             A2.IsEnabled = true;
             A3.IsEnabled = true;
@@ -85,8 +94,8 @@ namespace SylviesMp3s.Views
             A1.Text = b4changes.Title;
             A3.Text = b4changes.Genre;
             A4.Text = b4changes.Year.ToString();
-            A5.Text = b4changes.AlbumCover;
-            if (b4changes.IsPublic)
+            A5.Text = b4changes.Album_Cover;
+            if (b4changes.Is_Public == 1)
             {
                 C1.IsChecked = true;
             }

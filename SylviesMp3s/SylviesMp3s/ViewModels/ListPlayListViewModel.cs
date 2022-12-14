@@ -32,7 +32,7 @@ namespace SylviesMp3s.ViewModels
             AddPlaylistCommand = new RelayCommand(AddPlaylist);
             DelPlaylistCommand = new RelayCommand(DelPlaylist);
 
-            _selectedPlaylist = new Playlists("Select a playlist", "Select a playlist", "Select a playlist", 0, false, -1, "Select a playlist");
+            _selectedPlaylist = new Playlists("Select a playlist", "Select a playlist", "Select a playlist", 0, 0, -1, "Select a playlist");
 
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
@@ -113,7 +113,7 @@ namespace SylviesMp3s.ViewModels
 
 
             int? _year = 2022;
-            bool _is_public = false;
+            int _is_public = 0;
             string? _album_cover = null;
 
             /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 

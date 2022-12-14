@@ -1,11 +1,15 @@
-﻿using SylviesMp3s.Commands;
+﻿using MarthaService;
+using NAudio.MediaFoundation;
+using SylviesMp3s.Commands;
 using SylviesMp3s.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace SylviesMp3s.ViewModels
 {
@@ -16,6 +20,12 @@ namespace SylviesMp3s.ViewModels
         public ObservableCollection<Playlists> UserPlaylists = new ObservableCollection<Playlists>();
         public ObservableCollection<Tunes> SelectedPlaylistSongs = new ObservableCollection<Tunes>();
         public ObservableCollection<Playlists> PublicPlaylists = new ObservableCollection<Playlists>();
+
+        public MarthaProcessor _db = MarthaProcessor.Instance;
+
+        //A METTRE A -1 ET CHANGER LORS CONNECTION...
+        //public int CurrentUserID { get; set; } = -1;
+        public int CurrentUserID { get; set; } = 1;
 
         public BaseViewModel LeftViewModel
         {
@@ -83,6 +93,57 @@ namespace SylviesMp3s.ViewModels
             ChangeLeftViewAlbum = new RelayCommand(ChangeLeftViewA);
             ChangeLeftViewPublic = new RelayCommand(ChangeLeftViewP);
 
+
+            //TEST DB
+            LoadSongs(1);
+            LoadUserPlaylists();
+        }
+
+        public async void LoadSongs(int playlistid)
+        {
+            if (CurrentUserID != -1)
+            {
+                JsonObject b = new JsonObject();
+                b.Add("playlistid", playlistid);
+                b.Add("userid", CurrentUserID);
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("select-songs-from-playlist", b);
+
+                List<Tunes> lol = new List<Tunes>();
+
+                lol = MarthaResponseConverter<Tunes>.Convert(mresponse);
+
+                foreach (Tunes m in lol)
+                {
+                    SelectedPlaylistSongs.Add(m);
+                }
+            }
+            
+
+           // Console.WriteLine(lol.First().Title);
+        }
+
+        public async void LoadUserPlaylists()
+        {
+            if (CurrentUserID != -1)
+            {
+                JsonObject b = new JsonObject();
+                b.Add("userid", CurrentUserID);
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("select-playlists-from-user", b);
+
+                List<Playlists> lol = new List<Playlists>();
+
+                lol = MarthaResponseConverter<Playlists>.Convert(mresponse);
+
+                foreach (Playlists m in lol)
+                {
+                    UserPlaylists.Add(m);
+                }
+            }
+                
+
+            // Console.WriteLine(lol.First().Title);
         }
 
         private void ChangeLeftViewPL(object nothig)

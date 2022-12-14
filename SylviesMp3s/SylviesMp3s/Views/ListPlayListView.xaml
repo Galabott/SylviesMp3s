@@ -19,7 +19,7 @@
         <TextBox Name="A5" IsEnabled="False" Text="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.AlbumCover, Mode=TwoWay}"/>
         <WrapPanel Orientation="Horizontal">
             <Label Content="IsPublic?" />
-            <CheckBox IsEnabled="False" Name="C1" Height="16" Width="23" IsChecked="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.IsPublic, Mode=TwoWay}"/>
+            <CheckBox IsEnabled="False" Name="C1" Height="16" Width="23" IsChecked="{Binding ElementName=PLAYLISTS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Is_Public, Mode=TwoWay}"/>
         </WrapPanel>
         <Button Name="B1" Content="Add a playlist" Command="{Binding AddPlaylistCommand}" />
         <Button Name="B2" Content="Remove selected playlist" Command="{Binding DelPlaylistCommand}" />

@@ -24,7 +24,7 @@ namespace SylviesMp3s.Views
         public PlayerView()
         {
             InitializeComponent();
-            DataContext = new PlayerViewModel();
+            DataContext = new PlayerViewModel(this);
             albumCoverImage.Source = new BitmapImage(new Uri("/Assets/albumCover.png", UriKind.Relative));
             
         }

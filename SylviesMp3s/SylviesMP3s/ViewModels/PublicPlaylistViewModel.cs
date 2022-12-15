@@ -41,6 +41,10 @@ namespace SylviesMp3s.ViewModels
             {
                 _selectedPlaylist = value;
                 OnPropertyChanged("SelectedPlaylist");
+                if (_selectedPlaylist != null)
+                {
+                    mcvm.ChangeCurrentPlayList(SelectedPlaylist.Id);
+                }
             }
 
         }

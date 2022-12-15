@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
@@ -173,6 +174,28 @@ namespace SylviesMp3s.ViewModels
 
                 MarthaResponse mresponse = new MarthaResponse();
                 mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
+
+                RefreshList();
+
+                //Load songs from Copied Public Playlist
+                JsonObject b = new JsonObject();
+                b.Add("playlistid", playlist_id);
+                mresponse = new MarthaResponse(); 
+                mresponse = await _db.ExecuteQueryAsync("select-songs-from-public-playlist", b);
+
+                List<Playlists_tunes> Ptunes = new List<Playlists_tunes>();
+
+                Ptunes = MarthaResponseConverter<Playlists_tunes>.Convert(mresponse);
+
+                //Copy songs from copied public playlist
+                foreach (Playlists_tunes m in Ptunes)
+                {
+                    JsonObject c = new JsonObject();
+                    c.Add("id_tune", m.Id_Tune);
+                    c.Add("id_playlist", UserPlaylists.Last().Id);
+                    mresponse = new MarthaResponse();
+                    mresponse = await _db.ExecuteQueryAsync("insert-tune-playlist", c);
+                }
 
                 RefreshList();
             }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace SylviesMp3s.ViewModels
@@ -131,6 +132,7 @@ namespace SylviesMp3s.ViewModels
             publicPlaylistViewModel.PPlaylists = PublicPlaylists;
         }
 
+
         public async void LoadSongs(int playlistid)
         {
             if (CurrentUserID != -1)
@@ -153,6 +155,18 @@ namespace SylviesMp3s.ViewModels
         }
 
         public async void AddPlaylist(JsonObject playlist)
+        {
+            if (CurrentUserID != -1)
+            {
+
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
+
+                RefreshList();
+            }
+        }
+
+        public async void AddPublicPlaylist(JsonObject playlist, int playlist_id)
         {
             if (CurrentUserID != -1)
             {

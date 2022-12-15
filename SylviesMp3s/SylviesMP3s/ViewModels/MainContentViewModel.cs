@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
@@ -104,10 +105,8 @@ namespace SylviesMp3s.ViewModels
             LoadUserAlbums();
         }
 
-        public int currentPlayListId;
         public void ChangeCurrentPlayList(int playlistid)
         {
-            currentPlayListId = playlistid;
             SelectedPlaylistSongs.Clear();
             LoadSongs(playlistid);
             CentralViewModel= new PlayListViewModel(this);
@@ -133,6 +132,7 @@ namespace SylviesMp3s.ViewModels
 
             publicPlaylistViewModel.PPlaylists = PublicPlaylists;
         }
+
 
         public async void LoadSongs(int playlistid)
         {
@@ -162,6 +162,40 @@ namespace SylviesMp3s.ViewModels
 
                 MarthaResponse mresponse = new MarthaResponse();
                 mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
+
+                RefreshList();
+            }
+        }
+
+        public async void AddPublicPlaylist(JsonObject playlist, int playlist_id)
+        {
+            if (CurrentUserID != -1)
+            {
+
+                MarthaResponse mresponse = new MarthaResponse();
+                mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
+
+                RefreshList();
+
+                //Load songs from Copied Public Playlist
+                JsonObject b = new JsonObject();
+                b.Add("playlistid", playlist_id);
+                mresponse = new MarthaResponse(); 
+                mresponse = await _db.ExecuteQueryAsync("select-songs-from-public-playlist", b);
+
+                List<Playlists_tunes> Ptunes = new List<Playlists_tunes>();
+
+                Ptunes = MarthaResponseConverter<Playlists_tunes>.Convert(mresponse);
+
+                //Copy songs from copied public playlist
+                foreach (Playlists_tunes m in Ptunes)
+                {
+                    JsonObject c = new JsonObject();
+                    c.Add("id_tune", m.Id_Tune);
+                    c.Add("id_playlist", UserPlaylists.Last().Id);
+                    mresponse = new MarthaResponse();
+                    mresponse = await _db.ExecuteQueryAsync("insert-tune-playlist", c);
+                }
 
                 RefreshList();
             }
@@ -281,33 +315,6 @@ namespace SylviesMp3s.ViewModels
         public void changeCentralView(BaseViewModel newView)
         {
             CentralViewModel = newView;
-        }
-
-        public async Task SaveSongAsync(JsonObject song)
-        {
-            if (CurrentUserID != -1)
-            {
-                MarthaResponse mresponse = new MarthaResponse();
-                mresponse = await _db.ExecuteQueryAsync("update-song", song);
-
-                RefreshList();
-            }
-        }
-
-        public async void DelSong(JsonObject song)
-        {
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("delete-song", song);
-
-            RefreshList();
-        }
-
-        public async void AddSong(JsonObject song)
-        {
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("insert-song", song);
-
-            RefreshList();
         }
     }
     

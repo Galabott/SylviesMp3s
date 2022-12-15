@@ -17,37 +17,22 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand NextTuneCommand { get; private set; }
         public RelayCommand PreviousTuneCommand { get; private set; }
         public MainContentViewModel mcvm { get; private set; }
-        public PlayerView view { get; private set; }
-        private string[] songs;
-        private int index = 1;
         private MainContentViewModel mainContentViewModel;
         private BackgroundWorker worker;
         private bool stopThread = false;
 
-        public PlayerViewModel(PlayerView view)
+        public PlayerViewModel(MainContentViewModel mainContentViewModel)
         {
             NextTuneCommand = new RelayCommand(NextTune);
             PreviousTuneCommand = new RelayCommand(PreviousTune);
-            this.view = view;
-            songs = new string[] { "The Previous Axolotl Song", "The Current Axolotl Song", "The Next Axolotl Song"};
-            ProgressBarInit();
-        }
-
-        public PlayerViewModel(MainContentViewModel mainContentViewModel)
-        {
             this.mainContentViewModel = mainContentViewModel;
+            ProgressBarInit();
         }
 
         private void NextTune(object obj)
         {
             worker.CancelAsync();
             stopThread = true;
-
-            index++;
-
-            if(index == songs.Length) { index = 0;}
-
-            view.songNameLabel.Content = songs[index];
 
             ProgressBarInit();
 
@@ -56,18 +41,11 @@ namespace SylviesMp3s.ViewModels
         {
             worker.CancelAsync();
 
-            index--;
-
-            if (index == -1) { index = songs.Length-1; }
-
-            view.songNameLabel.Content = songs[index];
-
             ProgressBarInit();
 
         }
         private void ProgressBarInit()
         {
-            view.songProgessBar.Maximum = 20; // song length
 
             worker = new BackgroundWorker();
             worker.WorkerSupportsCancellation = true;
@@ -97,7 +75,7 @@ namespace SylviesMp3s.ViewModels
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            view.songProgessBar.Value = e.ProgressPercentage;
+            
         }
     }
 

@@ -143,7 +143,7 @@ namespace SylviesMp3s.ViewModels
             song.Add("length", _length);
             song.Add("id_user", mcvm.CurrentUserID);
             song.Add("id_album", _id_album);
-            song.Add("id_playlist", mcvm.currentPlayListId);
+            song.Add("id_playlist", mcvm.currentPlaylistId);
 
             if (_id_album == -1)
             {

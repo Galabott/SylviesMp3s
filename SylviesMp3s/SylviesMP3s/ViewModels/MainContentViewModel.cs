@@ -263,16 +263,18 @@ namespace SylviesMp3s.ViewModels
         }
 
         private void ChangeLeftViewPL(object nothig)
-        { 
-            LeftViewModel = new ListPlayListViewModel(this);
+        {
+            listPlayListViewModel.SelectedPlaylist = null;
+            LeftViewModel = listPlayListViewModel;
         }
         private void ChangeLeftViewA(object nothig)
         {
-            LeftViewModel = new AlbumViewModel(this);
+            albumViewModel.SelectedPlaylist = null;
+            LeftViewModel = albumViewModel;
         }
         private void ChangeLeftViewP(object nothig)
         {
-            LeftViewModel = new PublicPlaylistViewModel(this);
+            LeftViewModel = publicPlaylistViewModel;
         }
 
         public void changeParentViewModel(BaseViewModel newView)

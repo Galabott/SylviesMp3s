@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace SylviesMp3s.ViewModels
@@ -103,10 +105,10 @@ namespace SylviesMp3s.ViewModels
             LoadUserAlbums();
         }
 
-        public int currentPlayListId;
+        public int currentPlaylistId;
         public void ChangeCurrentPlayList(int playlistid)
         {
-            currentPlayListId = playlistid;
+            currentPlaylistId = playlistid;
             SelectedPlaylistSongs.Clear();
             LoadSongs(playlistid);
             CentralViewModel= new PlayListViewModel(this);

@@ -41,6 +41,10 @@ namespace SylviesMp3s.ViewModels
             {
                 _selectedPlaylist = value;
                 OnPropertyChanged("SelectedPlaylist");
+                if (_selectedPlaylist != null)
+                {
+                    mcvm.ChangeCurrentPlayList(SelectedPlaylist.Id);
+                }
             }
 
         }
@@ -90,7 +94,6 @@ namespace SylviesMp3s.ViewModels
                 if (SelectedPlaylist != null)
                 {
                     JsonObject playlist = new JsonObject();
-                    playlist.Add("publicidplaylist", SelectedPlaylist.Id);
                     playlist.Add("artist", SelectedPlaylist.Artist);
                     playlist.Add("genre", SelectedPlaylist.Genre);
                     playlist.Add("title", SelectedPlaylist.Title);
@@ -99,7 +102,7 @@ namespace SylviesMp3s.ViewModels
                     playlist.Add("id_user", mcvm.CurrentUserID);
                     playlist.Add("album_cover", SelectedPlaylist.Album_Cover);
 
-                    mcvm.AddPlaylist(playlist);
+                    mcvm.AddPublicPlaylist(playlist, SelectedPlaylist.Id);
                 }
             }
         }

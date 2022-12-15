@@ -1,11 +1,14 @@
 ﻿using SylviesMp3s.Commands;
 using SylviesMp3s.Models;
+using SylviesMp3s.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace SylviesMp3s.ViewModels
@@ -71,7 +74,21 @@ namespace SylviesMp3s.ViewModels
         private void UpdateSong(object nothig) {
 
         }
-        private void SaveSong(object nothig) {}
+        private void SaveSong(object nothig) {
+            if (SelectedSong != null)
+            {
+                JsonObject song = new JsonObject();
+                song.Add("songid", SelectedSong.Id);
+                song.Add("artist", SelectedSong.Artist);
+                song.Add("genre", SelectedSong.Genre);
+                song.Add("title", SelectedSong.Title);
+                song.Add("year", SelectedSong.Year);
+                song.Add("length", SelectedSong.Length);
+                song.Add("id_user", mcvm.CurrentUserID);
+
+                mcvm.SaveSongAsync(song);
+            }
+        }
         private void CancelSong(object nothig) { }
 
 
@@ -79,7 +96,10 @@ namespace SylviesMp3s.ViewModels
         {
             if (SelectedSong != null)
             {
-                songs.Remove(SelectedSong as Tunes);
+                JsonObject song = new JsonObject();
+                song.Add("userid", mcvm.CurrentUserID);
+                song.Add("songid", SelectedSong.Id);
+                mcvm.DelSong(song);
             }
         }
 
@@ -92,7 +112,7 @@ namespace SylviesMp3s.ViewModels
             string? _genre = "";
             int?     _year = 0;
             string? _filepath = "";
-            int?    _id_album = 0;
+            int?    _id_album = -1;
 
             string _title = "My Song #";
 
@@ -114,15 +134,21 @@ namespace SylviesMp3s.ViewModels
                 }
             }
 
-            /// IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- IMPORTANT -- 
-            /// CHANGER A CURRENT USER WHEN DONE
-            int? _id_user = -1;
-
-
             //int _id, string _title, string _artist, int _length, string _genre, int _year, string _filepath, int _id_album, int _id_user
-            Tunes A = new Tunes(_title, _artist, _length, _genre, _year, _filepath, _id_album, _id_user);
-            mcvm.SelectedPlaylistSongs.Add(A);
-            SelectedSong = A;
+            JsonObject song = new JsonObject();
+            song.Add("artist", _artist);
+            song.Add("genre", _genre);
+            song.Add("title", _title);
+            song.Add("year", _year);
+            song.Add("length", _length);
+            song.Add("id_user", mcvm.CurrentUserID);
+            song.Add("id_album", _id_album);
+            song.Add("id_playlist", mcvm.currentPlayListId);
+
+            if (_id_album == -1)
+            {
+                mcvm.AddSong(song);
+            }
         }
     }
 }

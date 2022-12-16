@@ -343,6 +343,25 @@ namespace SylviesMp3s.ViewModels
             MarthaResponse mresponse = new MarthaResponse();
             mresponse = await _db.ExecuteQueryAsync("insert-song", song);
 
+            JsonObject b = new JsonObject();
+            MarthaResponse mresponse2 = new MarthaResponse();
+            mresponse2 = await _db.ExecuteQueryAsync("select-tunes", b);
+
+            List<Tunes> tunes = new List<Tunes>();
+
+            tunes = MarthaResponseConverter<Tunes>.Convert(mresponse2);
+
+            int lastTuneId = tunes[0].Id;
+
+            JsonObject tunePlaylist = new JsonObject
+            {
+                { "id_tune", lastTuneId },
+                { "id_playlist", currentPlaylistId }
+            };
+
+            MarthaResponse mresponse3 = new MarthaResponse();
+            mresponse3 = await _db.ExecuteQueryAsync("insert-tune-playlist", tunePlaylist);
+
             RefreshList();
         }
     }

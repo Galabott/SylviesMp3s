@@ -96,10 +96,10 @@ namespace SylviesMp3s.ViewModels
         {
             if (SelectedSong != null)
             {
-                JsonObject song = new JsonObject();
-                song.Add("userid", mcvm.CurrentUserID);
-                song.Add("songid", SelectedSong.Id);
-                mcvm.DelSong(song);
+                JsonObject tune = new JsonObject();
+                tune.Add("playlistid", mcvm.currentPlaylistId);
+                tune.Add("tuneid", SelectedSong.Id);
+                mcvm.DelSongAsync(tune);
             }
         }
 
@@ -147,7 +147,7 @@ namespace SylviesMp3s.ViewModels
 
             if (_id_album == -1)
             {
-                mcvm.AddSong(song);
+                mcvm.AddSongAsync(song);
             }
         }
     }

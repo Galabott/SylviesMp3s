@@ -125,6 +125,14 @@ namespace SylviesMp3s.ViewModels
             listPlayListViewModel.PPlaylists = UserPlaylists;
             albumViewModel.PPlaylists = UserAlbums;
         }
+        private void RefreshSongs(int id)
+        {
+            SelectedPlaylistSongs = new ObservableCollection<Tunes>();
+
+            LoadSongs(id);
+
+            playListViewModel.Songs = SelectedPlaylistSongs;
+        }
 
         private void RefreshPublicList()
         {
@@ -325,20 +333,22 @@ namespace SylviesMp3s.ViewModels
             {
                 MarthaResponse mresponse = new MarthaResponse();
                 mresponse = await _db.ExecuteQueryAsync("update-song", song);
+                int playlistId = currentPlaylistId;
 
-                RefreshList();
+                RefreshSongs(playlistId);
             }
         }
 
-        public async void DelSong(JsonObject song)
+        public async void DelSongAsync(JsonObject tune)
         {
             MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("delete-song", song);
+            mresponse = await _db.ExecuteQueryAsync("delete-tune-playlist", tune);
+            int playlistId = currentPlaylistId;
 
-            RefreshList();
+            RefreshSongs(playlistId);
         }
 
-        public async void AddSong(JsonObject song)
+        public async void AddSongAsync(JsonObject song)
         {
             MarthaResponse mresponse = new MarthaResponse();
             mresponse = await _db.ExecuteQueryAsync("insert-song", song);
@@ -352,17 +362,18 @@ namespace SylviesMp3s.ViewModels
             tunes = MarthaResponseConverter<Tunes>.Convert(mresponse2);
 
             int lastTuneId = tunes[0].Id;
+            int playlistId = currentPlaylistId;
 
             JsonObject tunePlaylist = new JsonObject
             {
                 { "id_tune", lastTuneId },
-                { "id_playlist", currentPlaylistId }
+                { "id_playlist",  playlistId}
             };
 
             MarthaResponse mresponse3 = new MarthaResponse();
             mresponse3 = await _db.ExecuteQueryAsync("insert-tune-playlist", tunePlaylist);
 
-            RefreshList();
+            RefreshSongs(playlistId);
         }
     }
     

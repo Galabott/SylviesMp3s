@@ -31,6 +31,8 @@ namespace SylviesMp3s.ViewModels
         //public int CurrentUserID { get; set; } = -1;
         public int CurrentUserID { get; set; } = 1;
 
+        public User CurrentUser { get; set; } = null;
+
         public BaseViewModel LeftViewModel
         {
             get { return leftViewModel; }
@@ -385,6 +387,62 @@ namespace SylviesMp3s.ViewModels
             mresponse3 = await _db.ExecuteQueryAsync("insert-tune-playlist", tunePlaylist);
 
             RefreshSongs(playlistId);
+        }
+
+        public async void LogInAsync(string userame, string password)
+        {
+            JsonObject b = new JsonObject();
+            b.Add("username", userame);
+            b.Add("password", password);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("select-user-login", b);
+
+
+
+            CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+            CurrentUserID = CurrentUser.Id;
+
+
+        }
+
+        public async void SignUpAsync(string userame, string email, string password)
+        {
+
+            JsonObject b = new JsonObject();
+            b.Add("username", userame);
+            b.Add("email", email);
+            b.Add("password", password);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("insert-user-signup", b);
+
+
+
+        }
+
+        public async void ConfirmPasswordAsync(string password)
+        {
+
+            JsonObject b = new JsonObject();
+            b.Add("password", password);
+
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("update-user", b);
+
+        }
+        public async void chercheUserAsync(string userame, string email)
+        {
+            JsonObject b = new JsonObject();
+            b.Add("username", userame);
+            b.Add("email", email);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("select-user-email", b);
+
+
+
+            CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+            CurrentUserID = CurrentUser.Id;
+
+
         }
     }
     

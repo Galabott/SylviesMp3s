@@ -170,6 +170,17 @@ namespace SylviesMp3s.ViewModels
             if (CurrentUserID != -1)
             {
 
+                //JsonObject playlist = new JsonObject();
+                //playlist.Add("artist", null);
+                //playlist.Add("genre", null);
+                //playlist.Add("title", "Liked Playlist");
+                //playlist.Add("year", null);
+                //playlist.Add("is_public", false);
+                //playlist.Add("id_user", mcvm.CurrentUserID);
+                //playlist.Add("album_cover", null);
+                //mcvm.AddPlaylist(playlist);
+
+
                 MarthaResponse mresponse = new MarthaResponse();
                 mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
 

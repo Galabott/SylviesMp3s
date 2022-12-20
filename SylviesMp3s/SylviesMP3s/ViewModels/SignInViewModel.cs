@@ -15,9 +15,11 @@ namespace SylviesMp3s.ViewModels
 {
     class SignInViewModel : BaseViewModel
     {
-        string username;
-        string email;
-        string password;
+        private BaseViewModel logInViewModel;
+
+        public string email { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
         public RelayCommand ConnexionPressedCommand { get; private set; }
       
         public RelayCommand ReturnToLogInPressedCommand { get; private set; }
@@ -38,28 +40,6 @@ namespace SylviesMp3s.ViewModels
             if(username!="" && password!="" && email!="")
             {
                 mvm.SignUpAsync(username, password, email);
-
-                mvm.LogInAsync(username, password);
-
-                JsonObject playlist = new JsonObject();
-                playlist.Add("artist", null);
-                playlist.Add("genre", null);
-                playlist.Add("title", "Liked Playlist");
-                playlist.Add("year", null);
-                playlist.Add("is_public", false);
-                playlist.Add("id_user", mcvm.CurrentUserID);
-                playlist.Add("album_cover", null);
-                mcvm.AddPlaylist(playlist);
-
-                playlist = new JsonObject();
-                playlist.Add("artist", null);
-                playlist.Add("genre", null);
-                playlist.Add("title", "My Spngs");
-                playlist.Add("year", null);
-                playlist.Add("is_public", false);
-                playlist.Add("id_user", mcvm.CurrentUserID);
-                playlist.Add("album_cover", null);
-                mcvm.AddPlaylist(playlist);
 
             }
 

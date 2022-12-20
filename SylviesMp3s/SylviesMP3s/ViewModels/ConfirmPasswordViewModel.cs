@@ -14,8 +14,8 @@ namespace SylviesMp3s.ViewModels
 {
     class ConfirmPasswordViewModel : BaseViewModel
     {
-        string password;
-        string confirn_password;
+        public string password { get; set; }
+        public string confirn_password { get; set; }
         public MainViewModel mvm { get; set; }
 
         public RelayCommand ResetPasswordCommand { get; private set; }

@@ -18,8 +18,14 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand ReturnToConnexionCommand { get; private set; }
         public RelayCommand ResetPasswordCommand { get; private set; }
 
-        string username;
-        string email;
+        public string username
+        {
+            get; set;
+        }
+        public string email
+        {
+            get; set;
+        }
 
 
 

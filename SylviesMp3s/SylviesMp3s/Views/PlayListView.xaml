@@ -12,21 +12,21 @@
             <Button Name="B1" Content="Add a song" Command="{Binding AddTunesCommand}" />
             <Button Name="B2" Content="Remove selected song" Command="{Binding DelTunesCommand}" />
             <Button Name="B3" Content="Modify selected song" Command="{Binding UpdateTunesCommand}" Click="B3_Click" />
-            <Button Name="B4" Content="Save Changes" Command="{Binding SaveTunesCommand}" IsEnabled="False"  />
+            <Button Name="B4" Content="Save Changes" Command="{Binding SaveTunesCommand}" IsEnabled="False" Click="B4_Click"  />
             <Button Name="B5" Content="Cancel Changes" Command="{Binding CancelTunesCommand}" IsEnabled="False" Click="B5_Click" />
         </WrapPanel>
         <Rectangle Height="100" Width="10"/>
         <WrapPanel Orientation="Vertical" Width="162">
             <Label Content="Title" Background="White" Width="162"/>
-            <TextBox Name="A1" IsEnabled="False" TextWrapping="Wrap" Text=""/>
+            <TextBox Name="A1" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Title, Mode=TwoWay}"/>
             <Label Content="Artist" Background="White" Width="162"/>
-            <TextBox Name="A2" IsEnabled="False" TextWrapping="Wrap" Text=""/>
+            <TextBox Name="A2" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Artist, Mode=TwoWay}"/>
             <Label Content="Length" Background="White" Width="162"/>
-            <TextBox Name="A3" IsEnabled="False" TextWrapping="Wrap" Text=""/>
+            <TextBox Name="A3" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Length, Mode=TwoWay}"/>
             <Label Content="Genre" Background="White" Width="162"/>
-            <TextBox Name="A4" IsEnabled="False" TextWrapping="Wrap" Text=""/>
+            <TextBox Name="A4" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Genre, Mode=TwoWay}"/>
             <Label Content="Year" Background="White" Width="162"/>
-            <TextBox Name="A5" IsEnabled="False" TextWrapping="Wrap" Text=""/>
+            <TextBox Name="A5" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Year, Mode=TwoWay}"/>
         </WrapPanel>
     </WrapPanel>
 </UserControl>

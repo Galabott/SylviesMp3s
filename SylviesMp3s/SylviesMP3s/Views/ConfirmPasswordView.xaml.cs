@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using SylviesMp3s.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -23,6 +30,7 @@ namespace SylviesMp3s.Views
         public ConfirmPasswordView()
         {
             InitializeComponent();
+            DataContext = new ConfirmPasswordViewModel();
         }
     }
 }

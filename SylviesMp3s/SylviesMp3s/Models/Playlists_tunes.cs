@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SylviesMp3s.Models
@@ -17,11 +18,12 @@ namespace SylviesMp3s.Models
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Playlists_tunes(int _id, int _id_playlist, int _id_tune)
+        [JsonConstructor]
+        public Playlists_tunes(int id, int id_playlist, int id_tune)
         {
-            this.id = _id;
-            this.id_playlist = _id_playlist;
-            this.id_tune = _id_tune;
+            this.id = id;
+            this.id_playlist = id_playlist;
+            this.id_tune = id_tune;
         }
         public Playlists_tunes(int _id_playlist, int _id_tune)
         {
@@ -37,7 +39,8 @@ namespace SylviesMp3s.Models
             }
         }
 
-        public int IdTune
+        [JsonInclude]
+        public int Id_Tune
         {
             get => id_tune;
             set
@@ -46,7 +49,8 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("IdTune");
             }
         }
-        public int IdPlaylist
+        [JsonInclude]
+        public int Id_Playlist
         {
             get => id_playlist;
             set
@@ -55,13 +59,14 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("IdPlaylist");
             }
         }
+        [JsonInclude]
         public int Id
         {
             get => id;
             set
             {
                 id = value;
-                NotifyPropertyChanged("LastConnection");
+                NotifyPropertyChanged("Id");
             }
         }
 

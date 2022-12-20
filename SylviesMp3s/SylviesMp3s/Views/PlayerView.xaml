@@ -12,8 +12,8 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Image x:Name="albumCoverImage" HorizontalAlignment="Left" Height="100" Margin="10,0,0,0" VerticalAlignment="Center" Width="100" Source="/Assets/albumCover.png"/>
-        <Label x:Name="songNameLabel" Content="The Axolotl" Margin="178,22,126,0" VerticalAlignment="Top" FontFamily="Arial Black" HorizontalContentAlignment="Center" Height="24"/>
-        <Label x:Name="songAuthorLabel" Content="Sidramon" Margin="186,46,134,0" VerticalAlignment="Top" FontFamily="Arial Narrow" FontStyle="Italic" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <Label x:Name="songNameLabel" Margin="178,22,126,0" VerticalAlignment="Top" FontFamily="Arial Black" HorizontalContentAlignment="Center" Height="24" Content="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Title, Mode=TwoWay}"/>
+        <Label x:Name="songAuthorLabel" Margin="186,46,134,0" VerticalAlignment="Top" FontFamily="Arial Narrow" FontStyle="Italic" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Content="{Binding ElementName=SONGS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Artist, Mode=TwoWay}"/>
         <Button x:Name="previousSongButton" HorizontalAlignment="Left" Margin="281,78,0,0" VerticalAlignment="Top" Width="25" Height="26" Background="#00DDDDDD" Command="{Binding PreviousTuneCommand}">
             <StackPanel>
                 <Image Source="/Assets/previousBlack.png" HorizontalAlignment="Center"/>

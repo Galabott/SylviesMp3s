@@ -108,6 +108,11 @@ namespace SylviesMp3s.ViewModels
             LoadUserAlbums();
         }
 
+        public void LoadPage()
+        {
+            RefreshList();
+        }
+
         public int currentPlaylistId;
         public void ChangeCurrentPlayList(int playlistid)
         {

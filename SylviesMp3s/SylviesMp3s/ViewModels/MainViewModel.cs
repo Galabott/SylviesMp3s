@@ -83,7 +83,9 @@ namespace SylviesMp3s.ViewModels
             {
                 CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
                 CurrentUserID = CurrentUser.Id;
+                mainContentViewModel.CurrentUserID = CurrentUser.Id;
 
+                mainContentViewModel.LoadPage();
                 CurrentViewModel = mainContentViewModel;
             }
         }

@@ -16,17 +16,17 @@ namespace SylviesMp3s.ViewModels
     {
         string password;
         string confirn_password;
-        public MainContentViewModel mcvm { get; set; }
+        public MainViewModel mvm { get; set; }
 
         public RelayCommand ResetPasswordCommand { get; private set; }
 
 
 
-        public ConfirmPasswordViewModel()
+        public ConfirmPasswordViewModel(MainViewModel mvm)
         {
             ResetPasswordCommand = new RelayCommand(ResetPassword);
-           
 
+            this.mvm = mvm;
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
         private void ResetPassword(object nothig)
@@ -35,10 +35,10 @@ namespace SylviesMp3s.ViewModels
             { 
                 if(password == confirn_password)
                 {
-                    mcvm.ConfirmPasswordAsync(password);
+                    mvm.ConfirmPasswordAsync(password);
                 }
             }
-
+            
         }
 
        

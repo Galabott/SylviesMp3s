@@ -30,7 +30,6 @@ namespace SylviesMp3s.Views
         public SignInView()
         {
             InitializeComponent();
-            DataContext = new SignInViewModel();
         }
     }
 }

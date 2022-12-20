@@ -15,6 +15,18 @@
         <DataTemplate x:Name="test" DataType="{x:Type vm:MainContentViewModel}">
             <views:MainContentView DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:LogInViewModel}">
+            <views:LogInView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SignInViewModel}">
+            <views:SignInView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ConfirmPasswordViewModel}">
+            <views:ConfirmPasswordView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ForgotPasswordViewModel}">
+            <views:ForgotPasswordView DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentControl Content="{Binding CurrentViewModel}"/>

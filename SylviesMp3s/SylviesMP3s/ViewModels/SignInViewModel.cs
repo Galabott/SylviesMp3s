@@ -21,22 +21,25 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand ConnexionPressedCommand { get; private set; }
       
         public RelayCommand ReturnToLogInPressedCommand { get; private set; }
+        public MainViewModel mvm { get; set; }
         public MainContentViewModel mcvm { get; set; }
 
-        public SignInViewModel()
+        public SignInViewModel(MainViewModel mvm, MainContentViewModel mcvm )
         {
             ConnexionPressedCommand = new RelayCommand(ConnexionPressed);
             ReturnToLogInPressedCommand = new RelayCommand(ReturnToLogInPressed);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
+            this.mcvm = mcvm;
+            this.mvm = mvm;
         }
         private void ConnexionPressed(object nothig)
         {
             if(username!="" && password!="" && email!="")
             {
-                mcvm.SignUpAsync(username, password, email);
+                mvm.SignUpAsync(username, password, email);
 
-                mcvm.LogInAsync(username, password);
+                mvm.LogInAsync(username, password);
 
                 JsonObject playlist = new JsonObject();
                 playlist.Add("artist", null);
@@ -65,7 +68,7 @@ namespace SylviesMp3s.ViewModels
 
         private void ReturnToLogInPressed(object nothig)
         {
-
+            mvm.setloginpage();
         }
     }
 }

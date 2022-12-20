@@ -30,7 +30,6 @@ namespace SylviesMp3s.Views
         public ForgotPasswordView()
         {
             InitializeComponent();
-            DataContext = new ForgotPasswordViewModel();
         }
     }
 }

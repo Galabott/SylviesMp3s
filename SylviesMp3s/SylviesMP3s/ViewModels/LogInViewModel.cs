@@ -18,38 +18,38 @@ namespace SylviesMp3s.ViewModels
         public string username { get; set; }
         public string password { get; set; }
 
-        public MainContentViewModel mcvm { get; set; }
+        public MainViewModel mvm { get; set; }
         public RelayCommand LogInPressedCommand { get; private set; }
         public RelayCommand SignInPressedCommand { get; private set; }
         public RelayCommand ForgotPasswordCommand { get; private set; }
 
 
-        public LogInViewModel()
+        public LogInViewModel(MainViewModel mvm)
         {
             LogInPressedCommand = new RelayCommand(LogInPressed);
             SignInPressedCommand = new RelayCommand(SignInPressed);
             ForgotPasswordCommand = new RelayCommand(ForgotPassword);
 
             //Products = (ObservableCollection<Produit>)_db.Produits;
-            
+            this.mvm = mvm;
         }
         private void LogInPressed(object nothig)
         {
             if(username!= "" && password!="")
             {
-                mcvm.LogInAsync(username, password);
+                mvm.LogInAsync(username, password);
             }
             
         }
 
         private void SignInPressed(object nothig)
         {
-
+            mvm.setsigninpage();
         }
 
         private void ForgotPassword(object nothig)
         {
-
+            mvm.setforgotpage();
         }
 
     }

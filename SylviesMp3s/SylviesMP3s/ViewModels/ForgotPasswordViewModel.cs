@@ -14,7 +14,7 @@ namespace SylviesMp3s.ViewModels
 {
     class ForgotPasswordViewModel : BaseViewModel
     {
-        public MainContentViewModel mcvm { get; set; }
+        public MainViewModel mvm { get; set; }
         public RelayCommand ReturnToConnexionCommand { get; private set; }
         public RelayCommand ResetPasswordCommand { get; private set; }
 
@@ -23,24 +23,24 @@ namespace SylviesMp3s.ViewModels
 
 
 
-        public ForgotPasswordViewModel()
+        public ForgotPasswordViewModel(MainViewModel mvm)
         {
             ReturnToConnexionCommand = new RelayCommand(ReturnToConnexion);
             ResetPasswordCommand = new RelayCommand(ResetPassword);
 
-
+            this.mvm = mvm;
             //Products = (ObservableCollection<Produit>)_db.Produits;
         }
         private void ReturnToConnexion(object nothig)
         {
-           
+            mvm.setloginpage();
 
         }
         private void ResetPassword(object nothig)
         {
             if (username != "" && email != "")
             {
-                mcvm.chercheUserAsync(username, email);
+                mvm.chercheUserAsync(username, email);
             }
         }
     }

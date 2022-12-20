@@ -80,7 +80,7 @@ namespace SylviesMp3s.ViewModels
         public RelayCommand ChangeLeftViewPublic { get; private set; }
 
 
-        public MainContentViewModel( MainViewModel mvm)
+        public MainContentViewModel(MainViewModel mvm)
         {
             listPlayListViewModel = new ListPlayListViewModel(this);
             playListViewModel = new PlayListViewModel(this);
@@ -93,6 +93,7 @@ namespace SylviesMp3s.ViewModels
             UpperViewModel = playerViewModel;
 
             this.mvm = mvm;
+
 
 
             ChangeLeftViewPlayList = new RelayCommand(ChangeLeftViewPL);
@@ -113,7 +114,7 @@ namespace SylviesMp3s.ViewModels
             currentPlaylistId = playlistid;
             SelectedPlaylistSongs.Clear();
             LoadSongs(playlistid);
-            CentralViewModel= new PlayListViewModel(this);
+            CentralViewModel = new PlayListViewModel(this);
         }
 
         private void RefreshList()
@@ -203,7 +204,7 @@ namespace SylviesMp3s.ViewModels
                 //Load songs from Copied Public Playlist
                 JsonObject b = new JsonObject();
                 b.Add("playlistid", playlist_id);
-                mresponse = new MarthaResponse(); 
+                mresponse = new MarthaResponse();
                 mresponse = await _db.ExecuteQueryAsync("select-songs-from-public-playlist", b);
 
                 List<Playlists_tunes> Ptunes = new List<Playlists_tunes>();
@@ -329,7 +330,7 @@ namespace SylviesMp3s.ViewModels
         }
         public void changeLeftView(BaseViewModel newView)
         {
-            LeftViewModel= newView;
+            LeftViewModel = newView;
         }
         public void changeUpperView(BaseViewModel newView)
         {
@@ -389,61 +390,6 @@ namespace SylviesMp3s.ViewModels
             RefreshSongs(playlistId);
         }
 
-        public async void LogInAsync(string userame, string password)
-        {
-            JsonObject b = new JsonObject();
-            b.Add("username", userame);
-            b.Add("password", password);
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("select-user-login", b);
-
-
-
-            CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
-            CurrentUserID = CurrentUser.Id;
-
-
-        }
-
-        public async void SignUpAsync(string userame, string email, string password)
-        {
-
-            JsonObject b = new JsonObject();
-            b.Add("username", userame);
-            b.Add("email", email);
-            b.Add("password", password);
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("insert-user-signup", b);
-
-
-
-        }
-
-        public async void ConfirmPasswordAsync(string password)
-        {
-
-            JsonObject b = new JsonObject();
-            b.Add("password", password);
-
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("update-user", b);
-
-        }
-        public async void chercheUserAsync(string userame, string email)
-        {
-            JsonObject b = new JsonObject();
-            b.Add("username", userame);
-            b.Add("email", email);
-            MarthaResponse mresponse = new MarthaResponse();
-            mresponse = await _db.ExecuteQueryAsync("select-user-email", b);
-
-
-
-            CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
-            CurrentUserID = CurrentUser.Id;
-
-
-        }
     }
     
 }

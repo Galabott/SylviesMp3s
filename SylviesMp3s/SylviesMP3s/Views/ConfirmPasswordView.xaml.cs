@@ -30,7 +30,6 @@ namespace SylviesMp3s.Views
         public ConfirmPasswordView()
         {
             InitializeComponent();
-            DataContext = new ConfirmPasswordViewModel();
         }
     }
 }

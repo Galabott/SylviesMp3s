@@ -54,10 +54,10 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="center">
-            <Button Content="s'inscrire" Command="{Binding ConnexionPressed}" ></Button>
+            <Button Content="s'inscrire" Command="{Binding ConnexionPressedCommand}" ></Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="center">
-            <Button Content="Retourné à l'écran de connection" Command="{Binding ReturnToLogInPressed}"></Button>
+            <Button Content="Retourné à l'écran de connection" Command="{Binding ReturnToLogInPressedCommand}"></Button>
         </StackPanel>
     </Grid>
 </UserControl>

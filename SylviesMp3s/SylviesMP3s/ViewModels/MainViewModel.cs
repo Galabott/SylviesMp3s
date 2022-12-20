@@ -79,12 +79,13 @@ namespace SylviesMp3s.ViewModels
             MarthaResponse mresponse = new MarthaResponse();
             mresponse = await _db.ExecuteQueryAsync("select-user-login", b);
 
+            if (mresponse.Success && mresponse.Data.Any())
+            {
+                CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+                CurrentUserID = CurrentUser.Id;
 
-
-            CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
-            CurrentUserID = CurrentUser.Id;
-
-            CurrentViewModel = mainContentViewModel;
+                CurrentViewModel = mainContentViewModel;
+            }
         }
 
         public async void SignUpAsync(string userame, string email, string password)

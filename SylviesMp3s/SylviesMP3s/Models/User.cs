@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SylviesMp3s.Models
@@ -14,19 +15,20 @@ namespace SylviesMp3s.Models
         string username;
         string password;
         string? email;
-        bool is_admin;
+        int is_admin;
         DateTime last_connection;
 
-        public User(int _id, string _username, string _password, string _email, bool _isadmin, DateTime _last_connection) {
-            this.id = _id;
-            this.username = _username;
-            this.password = _password;
-            this.email = _email;
-            this.is_admin= _isadmin;
-            this.last_connection = _last_connection;
+        public User() { }
+        public User(int id, string username, string password, string email, int is_admin, DateTime last_connection) {
+            this.id =id;
+            this.username = username;
+            this.password = password;
+            this.email = email;
+            this.is_admin= is_admin;
+            this.last_connection = last_connection;
         }
 
-        public User(string _username, string _password, string _email, bool _isadmin, DateTime _last_connection)
+        public User(string _username, string _password, string _email, int _isadmin, DateTime _last_connection)
         {
             this.username = _username;
             this.password = _password;
@@ -35,6 +37,7 @@ namespace SylviesMp3s.Models
             this.last_connection = _last_connection;
         }
 
+
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
@@ -42,8 +45,8 @@ namespace SylviesMp3s.Models
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
-
-        public int Id
+        [JsonInclude]
+        public int Id 
         {
             get => id;
             set
@@ -52,7 +55,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Id");
             }
         }
-
+        [JsonInclude]
         public string Username
         {
             get => username;
@@ -62,7 +65,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Username");
             }
         }
-
+        [JsonInclude]
         public string Password
         {
             get => password;
@@ -72,7 +75,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Password");
             }
         }
-
+        [JsonInclude]
         public string Email
         {
             get => email; 
@@ -82,8 +85,8 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("Email");
             }
         }
-
-        public bool IsAdmin
+        [JsonInclude]
+        public int Is_Admin
         {
             get => is_admin; 
             set
@@ -92,7 +95,7 @@ namespace SylviesMp3s.Models
                 NotifyPropertyChanged("IsAdmin");
             }
         }
-
+        [JsonInclude]
         public DateTime LastConnection
         {
             get => last_connection; 

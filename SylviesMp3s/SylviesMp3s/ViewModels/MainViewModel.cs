@@ -112,7 +112,16 @@ namespace SylviesMp3s.ViewModels
                 mainContentViewModel.CurrentUserID = CurrentUser.Id;
 
                 mainContentViewModel.LoadPage();
-                CurrentViewModel = mainContentViewModel;
+                if(currentUser.Is_Admin==1)
+                {
+                    CurrentViewModel = adminViewModel;
+                }
+                else
+                {
+                    CurrentViewModel = mainContentViewModel;
+                }
+
+               
             }
         }
 
@@ -130,9 +139,6 @@ namespace SylviesMp3s.ViewModels
             if (mresponse.Success)
             {
                 AddPlaylistinSignUp(username, password);
-
-               
-
 
             }
 
@@ -206,10 +212,69 @@ namespace SylviesMp3s.ViewModels
                 playlist.Add("album_cover", null);
                 mresponse = await _db.ExecuteQueryAsync("insert-playlist", playlist);
 
-                setloginpage();
+                
 
             }
+
+           
         }
+        //admin crudl
+
+        public async void delUserAsync(int selectedUserId ,string selectedUserPassword)
+        {
+
+            JsonObject b = new JsonObject();
+            b.Add("password", selectedUserPassword);
+            b.Add("id", selectedUserId);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("deleate-user", b);
+
+           
+        }
+
+        public async void UpdateUserAsync(string username, string password,string email,int id)
+        {
+
+            JsonObject b = new JsonObject();
+            b.Add("username", username);
+            b.Add("password", password);
+            b.Add("email", email);
+            b.Add("id", id);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("update-user-complete", b);
+
+           
+        }
+
+        public async void deleteTuneAsync( int id)
+        {
+
+            JsonObject b = new JsonObject();
+           
+            b.Add("id", id);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("delete-tune-user", b);
+
+
+        }
+        public async void deletePlayAsync(int id)
+        {
+
+            JsonObject b = new JsonObject();
+
+            b.Add("id", id);
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("delete-play-user", b);
+
+
+        }
+        public async void changeViewAsync()
+        {
+            CurrentViewModel = mainContentViewModel;
+        }
+
+
+
     }
 }
 

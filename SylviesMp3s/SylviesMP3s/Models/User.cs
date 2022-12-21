@@ -37,6 +37,14 @@ namespace SylviesMp3s.Models
             this.last_connection = _last_connection;
         }
 
+        public User(string _username, string _password, string _email, int _isadmin)
+        {
+            this.username = _username;
+            this.password = _password;
+            this.email = _email;
+            this.is_admin = _isadmin;
+        }
+
 
         public void NotifyPropertyChanged(string propName)
         {

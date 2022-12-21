@@ -27,6 +27,9 @@
         <DataTemplate DataType="{x:Type vm:ForgotPasswordViewModel}">
             <views:ForgotPasswordView DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AdminViewModel}">
+            <views:AdminView DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentControl Content="{Binding CurrentViewModel}"/>

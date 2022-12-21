@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SylviesMp3s.Views.AdminView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SylviesMp3s.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <WrapPanel Orientation="Vertical">
+            <ListBox  Name="USERS" DisplayMemberPath="Username" Height="119" Width="158" ItemsSource="{Binding ListUser, Mode=TwoWay}" SelectedItem="{Binding SelectedUser, Mode=TwoWay}"/>
+            <Label Content="Username" />
+            <TextBox Name="A1" IsEnabled="False" Text="{Binding ElementName=USERS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Username, Mode=TwoWay}"/>
+            <Label Content="Email" />
+            <TextBox Name="A2" IsEnabled="False" Text="{Binding ElementName=USERS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Email, Mode=TwoWay}"/>
+            <Label Content="Password" />
+            <TextBox Name="A3" IsEnabled="False" Text="{Binding ElementName=USERS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Password, Mode=TwoWay}"/>
+            <WrapPanel Orientation="Horizontal">
+                <Label Content="IsAdmin?" />
+                <CheckBox IsEnabled="False" Name="C1" Height="16" Width="23" IsChecked="{Binding ElementName=USERS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Is_Admin, Mode=TwoWay}"/>
+            </WrapPanel>
+            <Button Name="B1" Content="Add an album" Command="{Binding AddUserCommand}" />
+            <Button Name="B2" Content="Remove selected album" Command="{Binding DelUserCommand}" />
+            <Button Name="B3" Content="Update selected album" Command="{Binding UpdatePlaylistCommand}" Click="B3_Click" />
+            <Button Name="A6" Content="Save Changes" Command="{Binding SaveUserCommand}" IsEnabled="False" Click="A6_Click" />
+            <Button Name="A7" Content="Cancel Changes" Command="{Binding CancelPlaylistCommand}" IsEnabled="False" Click="A7_Click" />
+        </WrapPanel>
+    </Grid>
+</UserControl>

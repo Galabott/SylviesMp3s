@@ -1,9 +1,11 @@
 ﻿using MarthaService;
+using Microsoft.VisualBasic.ApplicationServices;
 using SylviesMp3s.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.Json.Nodes;
+using System.Windows.Controls;
 
 namespace SylviesMp3s.ViewModels
 {
@@ -28,8 +30,8 @@ namespace SylviesMp3s.ViewModels
             get { return currentUserID; }
             set { currentUserID = value; mainContentViewModel.CurrentUserID = value; }
         }
-        public User currentUser = null;
-        public User CurrentUser 
+        public Models.User currentUser = null;
+        public Models.User CurrentUser 
         {
             get { return currentUser; }
             set { currentUser = value; mainContentViewModel.CurrentUser = value; }
@@ -43,7 +45,7 @@ namespace SylviesMp3s.ViewModels
         SignInViewModel signInViewModel;
         ForgotPasswordViewModel forgotPasswordViewModel;
         ConfirmPasswordViewModel confirmPasswordViewModel;
-
+        AdminViewModel adminViewModel;
 
         public MainViewModel()
         {
@@ -52,9 +54,16 @@ namespace SylviesMp3s.ViewModels
             signInViewModel = new SignInViewModel(this, mainContentViewModel);
             forgotPasswordViewModel = new ForgotPasswordViewModel(this);
             confirmPasswordViewModel= new ConfirmPasswordViewModel(this);
+            adminViewModel = new AdminViewModel(this);
             currentViewModel = logInViewModel;
+            //currentViewModel = adminViewModel;
         }
-
+        private void RefreshList()
+        {
+            ObservableCollection<Models.User> Userlists = new ObservableCollection<Models.User>();
+            Userlists = adminViewModel.ListUser;
+            adminViewModel.ListUser = Userlists;
+        }
         public void setloginpage()
         {
             CurrentViewModel = logInViewModel;
@@ -71,7 +80,22 @@ namespace SylviesMp3s.ViewModels
         {
             CurrentViewModel = confirmPasswordViewModel;
         }
+        public async void getUsers()
+        {
+            MarthaResponse mresponse = new MarthaResponse();
+            mresponse = await _db.ExecuteQueryAsync("select-all-users");
 
+            List<Models.User> users = new List<Models.User>();
+
+            users = MarthaResponseConverter<Models.User>.Convert(mresponse);
+
+            foreach (Models.User m in users)
+            {
+                adminViewModel.ListUser.Add(m);
+            }
+
+            RefreshList();
+        }
 
         public async void LogInAsync(string userame, string password)
         {
@@ -83,7 +107,7 @@ namespace SylviesMp3s.ViewModels
 
             if (mresponse.Success && mresponse.Data.Any())
             {
-                CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+                CurrentUser = MarthaResponseConverter<Models.User>.Convert(mresponse).First();
                 CurrentUserID = CurrentUser.Id;
                 mainContentViewModel.CurrentUserID = CurrentUser.Id;
 
@@ -136,7 +160,7 @@ namespace SylviesMp3s.ViewModels
             if (mresponse.Success && mresponse.Data.Any())
             {
 
-                CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+                CurrentUser = MarthaResponseConverter<Models.User>.Convert(mresponse).First();
                 CurrentUserID = CurrentUser.Id;
             }
             setconfirmpage();
@@ -151,7 +175,7 @@ namespace SylviesMp3s.ViewModels
 
             if (mresponse.Success && mresponse.Data.Any())
             {
-                CurrentUser = MarthaResponseConverter<User>.Convert(mresponse).First();
+                CurrentUser = MarthaResponseConverter<Models.User>.Convert(mresponse).First();
                 CurrentUserID = CurrentUser.Id;
                 mainContentViewModel.CurrentUserID = CurrentUser.Id;
                 mainContentViewModel.CurrentUser = CurrentUser;

@@ -19,11 +19,12 @@
                 <Label Content="IsAdmin?" />
                 <CheckBox IsEnabled="False" Name="C1" Height="16" Width="23" IsChecked="{Binding ElementName=USERS, UpdateSourceTrigger=PropertyChanged, Path=SelectedValue.Is_Admin, Mode=TwoWay}"/>
             </WrapPanel>
-            <Button Name="B1" Content="Add an album" Command="{Binding AddUserCommand}" />
-            <Button Name="B2" Content="Remove selected album" Command="{Binding DelUserCommand}" />
-            <Button Name="B3" Content="Update selected album" Command="{Binding UpdatePlaylistCommand}" Click="B3_Click" />
+            <Button Name="B1" Content="Add an user" Command="{Binding AddUserCommand}" Click="B1_Click"/>
+            <Button Name="B2" Content="Remove selected user" Command="{Binding DelUserCommand}" />
+            <Button Name="B3" Content="Update selected user" Command="{Binding UpdatePlaylistCommand}" Click="B3_Click" />
             <Button Name="A6" Content="Save Changes" Command="{Binding SaveUserCommand}" IsEnabled="False" Click="A6_Click" />
             <Button Name="A7" Content="Cancel Changes" Command="{Binding CancelPlaylistCommand}" IsEnabled="False" Click="A7_Click" />
+            <Button Name="A8" Content="return to mane page" Command="{Binding ReturnCommand}"/>
         </WrapPanel>
     </Grid>
 </UserControl>

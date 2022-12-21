@@ -40,6 +40,29 @@ namespace SylviesMp3s.Views
             }
         }
 
+        private void B1_Click(object sender, RoutedEventArgs e)
+        {
+            int year = 0;
+            b4changes = new User(A1.Text, A2.Text, A3.Text, CheckCheckbox());
+            A1.IsEnabled = true;
+            A2.IsEnabled = true;
+            A3.IsEnabled = true;
+
+
+
+            A6.IsEnabled = true;
+            A7.IsEnabled = true;
+
+            B1.IsEnabled = false;
+            B2.IsEnabled = false;
+            B3.IsEnabled = false;
+
+            
+
+            USERS.IsEnabled = false;
+
+
+        }
         private void B3_Click(object sender, RoutedEventArgs e)
         {
             //string? _artist, string? _genre, string _title, int? _year, bool _is_public, int _id_user, string? _album_cover

@@ -12,15 +12,20 @@ namespace SylviesMp3s.ViewModels
 {
     internal class AdminViewModel : BaseViewModel
     {
+        int modes = 0;
+
         public MainViewModel mvm;
 
-
+        public string username;
+        public string email;
+        public string password;
 
 
         public RelayCommand AddUserCommand { get; private set; }
         public RelayCommand DelUserCommand { get; private set; }
         public RelayCommand SaveUserCommand { get; private set; }
         public RelayCommand ReturnCommand { get; private set; }
+        public RelayCommand CancelPlaylistCommand { get; private set; }
 
 
         private User _selectedUser;
@@ -29,6 +34,7 @@ namespace SylviesMp3s.ViewModels
             get => _selectedUser;
             set
             {
+
                 _selectedUser = value;
                 OnPropertyChanged("SelectedPlaylist");
             }
@@ -55,27 +61,76 @@ namespace SylviesMp3s.ViewModels
             DelUserCommand = new RelayCommand(DelUser);
             SaveUserCommand = new RelayCommand(SaveUser);
             ReturnCommand = new RelayCommand(Return);
-            ListUser= new ObservableCollection<User>();
-
-
+            CancelPlaylistCommand = new RelayCommand(Cancel);
+            ListUser = new ObservableCollection<User>();
+         
             mvm.getUsers();
         }
 
+        public void refreshList()
+        {
+            ListUser = new ObservableCollection<User>();
+            mvm.getUsers();
+
+        }
         private void AddUser(object nothig)
         {
 
+
+            modes = 1;
+
+           
+               // mvm.SignUpAsync(_selectedUser.Username, _selectedUser.Password, _selectedUser.Email);
+               //  refreshList();
+
+
         }
-        private void DelUser(object nothig) 
-        {
-        
+        private void DelUser(object nothig)
+        { 
+            if(_selectedUser!=null)
+            {
+                mvm.delUserAsync(_selectedUser.Id, _selectedUser.Password);
+                mvm.deleteTuneAsync(_selectedUser.Id);
+                mvm.deletePlayAsync(_selectedUser.Id);
+                refreshList();
+            }
+
+
         }
         private void SaveUser(object nothig) 
         {
-        
+            if(modes ==1 )
+            {
+                mvm.SignUpAsync(_selectedUser.Username, _selectedUser.Password, _selectedUser.Email);
+                refreshList();
+
+                modes = 0;
+
+            }
+            else
+            {
+                if (_selectedUser != null)
+                {
+                    if (_selectedUser.Username != "" && _selectedUser.Password != "" && _selectedUser.Email != "")
+                    {
+                        mvm.UpdateUserAsync(_selectedUser.Username, _selectedUser.Password, _selectedUser.Email, _selectedUser.Id);
+                        refreshList();
+                    }
+
+                }
+
+            }
+
+           
+           
         }
         private void Return(object nothig) 
         {
-        
+            mvm.changeViewAsync();
+        }
+        private void Cancel(object nothig)
+        {
+            modes = 0;
         }
     }
 }

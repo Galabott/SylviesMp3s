@@ -40,7 +40,7 @@ namespace SylviesMp3s.ViewModels
             if(username!="" && password!="" && email!="")
             {
                 mvm.SignUpAsync(username, password, email);
-
+                mvm.setloginpage();
             }
 
         }

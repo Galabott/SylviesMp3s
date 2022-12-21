@@ -18,7 +18,15 @@ namespace SylviesMp3s.Models
         int is_admin;
         DateTime last_connection;
 
-        public User() { }
+        public User()
+        {
+            this.id = 0;
+            this.username = "";
+            this.password = "";
+            this.email = "";
+            this.is_admin = 0;
+           
+        }
         public User(int id, string username, string password, string email, int is_admin, DateTime last_connection) {
             this.id =id;
             this.username = username;

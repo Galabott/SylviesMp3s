@@ -24,7 +24,7 @@
             <Button Name="B3" Content="Update selected user" Command="{Binding UpdatePlaylistCommand}" Click="B3_Click" />
             <Button Name="A6" Content="Save Changes" Command="{Binding SaveUserCommand}" IsEnabled="False" Click="A6_Click" />
             <Button Name="A7" Content="Cancel Changes" Command="{Binding CancelPlaylistCommand}" IsEnabled="False" Click="A7_Click" />
-            <Button Name="A8" Content="return to mane page" Command="{Binding ReturnCommand}"/>
+            <Button Name="A8" Content="return to main page" Command="{Binding ReturnCommand}"/>
         </WrapPanel>
     </Grid>
 </UserControl>

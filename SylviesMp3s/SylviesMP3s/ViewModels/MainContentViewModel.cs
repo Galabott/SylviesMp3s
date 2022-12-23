@@ -102,7 +102,7 @@ namespace SylviesMp3s.ViewModels
 
 
             //TEST DB
-            LoadSongs(1);
+            //LoadSongs(1);
             LoadUserPlaylists();
             LoadPublicPlaylists();
             LoadUserAlbums();
@@ -316,16 +316,19 @@ namespace SylviesMp3s.ViewModels
 
         private void ChangeLeftViewPL(object nothig)
         {
+            RefreshList();
             listPlayListViewModel.SelectedPlaylist = null;
             LeftViewModel = listPlayListViewModel;
         }
         private void ChangeLeftViewA(object nothig)
         {
+            RefreshList();
             albumViewModel.SelectedPlaylist = null;
             LeftViewModel = albumViewModel;
         }
         private void ChangeLeftViewP(object nothig)
         {
+            RefreshPublicList();
             LeftViewModel = publicPlaylistViewModel;
         }
 

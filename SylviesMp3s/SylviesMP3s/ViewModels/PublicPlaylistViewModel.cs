@@ -29,7 +29,7 @@ namespace SylviesMp3s.ViewModels
 
             set
             {
-                mcvm.UserPlaylists = value;
+                mcvm.PublicPlaylists = value;
                 OnPropertyChanged();
             }
         }
@@ -59,18 +59,18 @@ namespace SylviesMp3s.ViewModels
             //Products = (ObservableCollection<Produit>)_db.Produits;
 
             //Test Public Playlist
-            string? _artist = null;
-            string? _genre = null;
-            string _title = "Public Playlist #";
-            int i = 1;
-            bool goodName = false;
-            while (!goodName){Playlists compareTo;try{compareTo = PPlaylists.Where(x => x.Title == _title + i).First();i++;}catch{goodName = true;_title += i;}}
-            int? _year = 2022;
-            int _is_public = 1;
-            string? _album_cover = null;
-            int _id_user = -1;
-            Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
-            mcvm.PublicPlaylists.Add(A);
+            //string? _artist = null;
+            //string? _genre = null;
+            //string _title = "Public Playlist #";
+            //int i = 1;
+            //bool goodName = false;
+            //while (!goodName){Playlists compareTo;try{compareTo = PPlaylists.Where(x => x.Title == _title + i).First();i++;}catch{goodName = true;_title += i;}}
+            //int? _year = 2022;
+            //int _is_public = 1;
+            //string? _album_cover = null;
+            //int _id_user = -1;
+            //Playlists A = new Playlists(_artist, _genre, _title, _year, _is_public, _id_user, _album_cover);
+            //mcvm.PublicPlaylists.Add(A);
             //Test Public Playlist
 
         }
